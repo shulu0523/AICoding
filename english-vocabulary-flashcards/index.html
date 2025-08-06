@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英语4级单词智能学习系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Tailwind配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E3F2FD', // 浅蓝色背景
+            secondary: '#FFFFFF', // 白色卡片
+            accent: '#2196F3', // 蓝色强调色
+            success: '#4CAF50', // 成功/已掌握
+            warning: '#FF9800', // 警告/收藏
+           复习: '#9C27B0', // 复习单词标记
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .card-flip {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      }
+      .card-front, .card-back {
+        backface-visibility: hidden;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
+      .card-flipped .card-front {
+        transform: rotateY(180deg);
+      }
+      .card-flipped .card-back {
+        transform: rotateY(0deg);
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .btn-hover {
+        transition: all 0.3s ease;
+      }
+      .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .stat-bar {
+        height: 8px;
+        border-radius: 4px;
+        background-color: #e0e0e0;
+        overflow: hidden;
+      }
+      .stat-progress {
+        height: 100%;
+        transition: width 0.5s ease;
+      }
+      .badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body class="bg-primary min-h-screen flex flex-col items-center justify-start p-4 font-sans">
+  <!-- 加载状态 -->
+  <div id="loading" class="fixed inset-0 bg-primary/80 flex items-center justify-center z-50">
+    <div class="text-center">
+      <div class="w-16 h-16 border-4 border-accent border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p class="text-gray-700 text-lg">加载单词库中...</p>
+    </div>
+  </div>
+  
+  <!-- 头部区域 -->
+  <header class="w-full max-w-4xl my-6 text-center">
+    <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-gray-800 mb-2 text-shadow">英语4级单词智能学习</h1>
+    <p class="text-gray-600 text-lg">基于记忆规律的智能复习系统</p>
+  </header>
+  
+  <!-- 统计和筛选区域 -->
+  <div class="w-full max-w-4xl bg-white rounded-xl shadow-md p-4 mb-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="w-full md:w-1/2">
+        <div class="flex justify-between mb-2">
+          <span class="text-gray-700 font-medium">总体进度</span>
+          <span id="progress-text" class="text-accent font-bold">0/0 (0%)</span>
+        </div>
+        <div class="stat-bar">
+          <div id="progress-bar" class="stat-progress bg-accent" style="width: 0%"></div>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 w-full md:w-auto flex-wrap justify-center">
+        <div class="flex items-center">
+          <input type="checkbox" id="show-review" class="mr-2 h-4 w-4 accent-复习">
+          <label for="show-review" class="text-gray-700">只看复习单词</label>
+        </div>
+        
+        <div class="flex items-center">
+          <input type="checkbox" id="show-new" class="mr-2 h-4 w-4 accent-accent">
+          <label for="show-new" class="text-gray-700">只看新单词</label>
+        </div>
+        
+        <button id="reset-progress" class="text-sm text-gray-600 hover:text-accent flex items-center">
+          <i class="fa fa-refresh mr-1"></i> 重置学习进度
+        </button>
+      </div>
+    </div>
+    
+    <div class="mt-4 flex flex-wrap gap-3">
+      <div class="flex items-center">
+        <span class="w-3 h-3 rounded-full bg-accent inline-block mr-2"></span>
+        <span class="text-sm text-gray-600">新单词</span>
+      </div>
+      <div class="flex items-center">
+        <span class="w-3 h-3 rounded-full bg-复习 inline-block mr-2"></span>
+        <span class="text-sm text-gray-600">今日复习</span>
+      </div>
+      <div class="flex items-center">
+        <span class="w-3 h-3 rounded-full bg-success inline-block mr-2"></span>
+        <span class="text-sm text-gray-600">已掌握</span>
+      </div>
+      <div class="flex items-center">
+        <span class="w-3 h-3 rounded-full bg-warning inline-block mr-2"></span>
+        <span class="text-sm text-gray-600">收藏单词</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 每日学习计划 -->
+  <div class="w-full max-w-4xl bg-white rounded-xl shadow-md p-4 mb-6">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">今日学习计划</h2>
+    <div class="flex flex-wrap gap-4">
+      <div class="flex items-center">
+        <span class="text-gray-700 font-medium">新单词:</span>
+        <span id="new-words-count" class="ml-2 px-2 py-1 bg-accent/10 text-accent rounded">0/10</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-700 font-medium">复习单词:</span>
+        <span id="review-words-count" class="ml-2 px-2 py-1 bg-复习/10 text-复习 rounded">0</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-700 font-medium">学习日期:</span>
+        <span id="current-date" class="ml-2 text-gray-600"></span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 主内容区域 -->
+  <main class="w-full max-w-4xl flex-grow flex flex-col items-center justify-center">
+    <!-- 单词卡片 -->
+    <div id="card-container" class="card-flip w-full max-w-md aspect-[3/2] cursor-pointer mb-8 relative">
+      <div id="card" class="w-full h-full rounded-2xl shadow-xl overflow-hidden bg-secondary">
+        <!-- 卡片正面 (英文单词) -->
+        <div class="card-front absolute w-full h-full flex flex-col items-center justify-center p-8">
+          <div class="absolute top-4 right-4 flex gap-2">
+            <button id="favorite-btn" class="text-gray-400 hover:text-warning transition-colors">
+              <i class="fa fa-star text-xl"></i>
+            </button>
+            <div id="review-badge" class="hidden badge bg-复习">
+              <i class="fa fa-repeat text-xs"></i>
+            </div>
+          </div>
+          <div class="mb-4">
+            <button id="play-audio" class="text-accent hover:text-accent/80 transition-colors">
+              <i class="fa fa-volume-up text-2xl"></i>
+            </button>
+          </div>
+          <h2 id="word" class="text-[clamp(2.5rem,8vw,4rem)] font-bold text-gray-800 text-center mb-2">loading...</h2>
+          <p id="word-type" class="text-gray-500 text-xl italic">--</p>
+        </div>
+        
+        <!-- 卡片背面 (中文释义) -->
+        <div class="card-back absolute w-full h-full flex flex-col items-center justify-center p-8 bg-accent/5">
+          <h2 id="word-back" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold text-gray-800 text-center mb-4">loading...</h2>
+          <div class="w-full max-w-xs">
+            <p id="definition" class="text-gray-700 text-xl leading-relaxed">--</p>
+            <div class="mt-4 text-gray-600">
+              <div class="flex items-center">
+                <p id="example" class="italic flex-grow">--</p>
+                <button id="play-example-audio" class="text-accent hover:text-accent/80 transition-colors ml-2 p-1">
+                  <i class="fa fa-volume-up"></i>
+                </button>
+              </div>
+              <p id="example-translation" class="mt-2">--</p>
+            </div>
+            
+            <div class="mt-6 flex justify-center gap-3">
+              <button id="difficult-btn" class="px-3 py-2 bg-gray-200 hover:bg-warning hover:text-white rounded-lg transition-colors">
+                <i class="fa fa-exclamation mr-1"></i> 难记
+              </button>
+              <button id="master-btn" class="px-3 py-2 bg-gray-200 hover:bg-success hover:text-white rounded-lg transition-colors">
+                <i class="fa fa-check mr-1"></i> 已掌握
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 进度指示器 -->
+      <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-1 flex-wrap justify-center" id="progress-indicators">
+        <!-- 动态生成 -->
+      </div>
+    </div>
+    
+    <!-- 控制按钮 -->
+    <div class="flex space-x-4 mt-6">
+      <button id="prev-btn" class="px-6 py-3 bg-white rounded-lg shadow-md text-gray-700 btn-hover">
+        <i class="fa fa-arrow-left mr-2"></i>上一个
+      </button>
+      <button id="next-btn" class="px-6 py-3 bg-accent rounded-lg shadow-md text-white btn-hover">
+        下一个<i class="fa fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </main>
+  
+  <!-- 页脚区域 -->
+  <footer class="w-full max-w-4xl mt-10 text-center text-gray-500 text-sm pb-6">
+    <p>基于艾宾浩斯遗忘曲线的智能复习系统 | 每天学习10个新单词，复习已学单词</p>
+  </footer>
+
+  <script>
+    // 应用配置
+    const config = {
+      dailyNewWords: 10, // 每天学习的新单词数量
+      reviewIntervals: [1, 3, 7, 14, 30], // 艾宾浩斯复习间隔（天）
+    };
+    
+    // 全局数据
+    let allVocabulary = []; // 所有四级单词
+    let dailyWords = []; // 今日学习的单词
+    let currentWordIndex = 0;
+    let filterOptions = {
+      showReview: false,
+      showNew: false
+    };
+    
+    // DOM元素
+    const card = document.getElementById('card');
+    const cardContainer = document.getElementById('card-container');
+    const wordElement = document.getElementById('word');
+    const wordBackElement = document.getElementById('word-back');
+    const wordTypeElement = document.getElementById('word-type');
+    const definitionElement = document.getElementById('definition');
+    const exampleElement = document.getElementById('example');
+    const exampleTranslationElement = document.getElementById('example-translation');
+    const playAudioButton = document.getElementById('play-audio');
+    const nextButton = document.getElementById('next-btn');
+    const prevButton = document.getElementById('prev-btn');
+    const favoriteButton = document.getElementById('favorite-btn');
+    const masterButton = document.getElementById('master-btn');
+    const difficultButton = document.getElementById('difficult-btn');
+    const showReviewCheckbox = document.getElementById('show-review');
+    const showNewCheckbox = document.getElementById('show-new');
+    const progressText = document.getElementById('progress-text');
+    const progressBar = document.getElementById('progress-bar');
+    const resetProgressButton = document.getElementById('reset-progress');
+    const newWordsCountElement = document.getElementById('new-words-count');
+    const reviewWordsCountElement = document.getElementById('review-words-count');
+    const currentDateElement = document.getElementById('current-date');
+    const reviewBadge = document.getElementById('review-badge');
+    const loadingElement = document.getElementById('loading');
+    
+    // 初始化应用
+    async function initApp() {
+      try {
+        // 显示当前日期
+        currentDateElement.textContent = new Date().toLocaleDateString('zh-CN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          weekday: 'long'
+        });
+        
+        // 从本地存储加载学习数据
+        loadLearningData();
+        
+        // 获取单词数据（模拟网络请求）
+        await fetchVocabularyData();
+        
+        // 准备今日学习计划
+        prepareDailyWords();
+        
+        // 初始化显示第一个单词
+        if (dailyWords.length > 0) {
+          currentWordIndex = 0;
+          updateCardDisplay();
+          updateProgressStats();
+        } else {
+          showEmptyState();
+        }
+      } catch (error) {
+        console.error('初始化失败:', error);
+        alert('加载单词库失败，请刷新页面重试');
+      } finally {
+        // 隐藏加载状态
+        loadingElement.classList.add('hidden');
+      }
+    }
+    
+    // 从vocabulary.json文件获取单词数据
+    async function fetchVocabularyData() {
+      console.log('开始加载单词数据...');
+      // 清除本地存储，避免加载可能损坏的数据
+      localStorage.removeItem('cet4Vocabulary');
+      console.log('已清除本地存储');
+      
+      try {
+        // 从本地JSON文件加载数据
+        console.log('尝试从vocabulary.json加载数据');
+        const response = await fetch('vocabulary.json');
+        console.log('请求状态:', response.status);
+        if (!response.ok) {
+          throw new Error('Failed to load vocabulary data: ' + response.statusText);
+        }
+        
+        const text = await response.text();
+        console.log('获取到数据文本，长度:', text.length);
+        // 检查文本是否为空
+        if (!text.trim()) {
+          throw new Error('获取到的JSON数据为空');
+        }
+        // 检查文本开头和结尾
+        console.log('文本开头:', text.substring(0, 50));
+        console.log('文本结尾:', text.substring(text.length - 50));
+        try {
+          allVocabulary = JSON.parse(text);
+          console.log('JSON解析成功，单词数量:', allVocabulary.length);
+        } catch (jsonError) {
+          console.error('JSON解析错误:', jsonError);
+          console.error('错误位置附近的文本:', text.substring(Math.max(0, jsonError.position - 50), Math.min(text.length, jsonError.position + 50)));
+          throw jsonError;
+        }
+        
+        // 保存到本地存储，避免重复请求
+        localStorage.setItem('cet4Vocabulary', JSON.stringify(allVocabulary));
+      } catch (error) {
+        console.error('加载单词数据错误:', error);
+        alert('加载单词库失败: ' + error.message);
+      }
+
+      // 保存到本地存储，避免重复请求
+      localStorage.setItem('cet4Vocabulary', JSON.stringify(allVocabulary));
+    }
+    
+    // 从本地存储加载学习数据
+    function loadLearningData() {
+      const storedData = localStorage.getItem('vocabularyLearningData');
+      if (storedData) {
+        const learningData = JSON.parse(storedData);
+        
+        // 恢复单词学习状态
+        if (learningData.wordStatus) {
+          learningData.wordStatus.forEach(status => {
+            const wordIndex = allVocabulary.findIndex(w => w.word === status.word);
+            if (wordIndex !== -1) {
+              allVocabulary[wordIndex] = { ...allVocabulary[wordIndex], ...status };
+            }
+          });
+        }
+        
+        // 恢复每日学习记录
+        if (learningData.dailyRecords) {
+          dailyRecords = learningData.dailyRecords;
+        }
+      }
+    }
+    
+    // 保存学习数据到本地存储
+    function saveLearningData() {
+      const wordStatus = allVocabulary.map(word => ({
+        word: word.word,
+        isMastered: word.isMastered || false,
+        isFavorite: word.isFavorite || false,
+        difficulty: word.difficulty || 0,
+        lastReviewed: word.lastReviewed,
+        reviewCount: word.reviewCount || 0,
+        nextReviewDate: word.nextReviewDate
+      }));
+      
+      const learningData = {
+        wordStatus,
+        dailyRecords
+      };
+      
+      localStorage.setItem('vocabularyLearningData', JSON.stringify(learningData));
+    }
+    
+    // 每日学习记录
+    let dailyRecords = [];
+    
+    // 准备今日学习的单词
+    function prepareDailyWords() {
+      const today = getDateString(new Date());
+      
+      // 检查是否已有今日记录
+      const todayRecord = dailyRecords.find(record => record.date === today);
+      
+      if (todayRecord) {
+        // 加载今日已安排的单词
+        dailyWords = todayRecord.words.map(wordId => {
+          return allVocabulary.find(word => word.word === wordId);
+        }).filter(Boolean);
+        return;
+      }
+      
+      // 没有今日记录，创建新的学习计划
+      const newRecord = {
+        date: today,
+        words: [],
+        completedNewWords: 0
+      };
+      
+      // 1. 找出需要复习的单词
+      const reviewWords = getWordsNeedingReview();
+      
+      // 2. 选择新单词（排除已掌握和已学习的）
+      const newWords = selectNewWords(config.dailyNewWords);
+      
+      // 合并复习单词和新单词，打乱顺序
+      dailyWords = [...reviewWords, ...newWords];
+      shuffleArray(dailyWords);
+      
+      // 保存到今日记录
+      newRecord.words = dailyWords.map(word => word.word);
+      dailyRecords.push(newRecord);
+      
+      // 保存学习数据
+      saveLearningData();
+    }
+    
+    // 获取需要复习的单词
+    function getWordsNeedingReview() {
+      const today = getDateString(new Date());
+      return allVocabulary.filter(word => {
+        // 需要复习且未掌握的单词
+        return !word.isMastered && 
+               word.nextReviewDate && 
+               word.nextReviewDate <= today;
+      });
+    }
+    
+    // 选择新单词
+    function selectNewWords(count) {
+      // 筛选从未学习过的单词
+      const unlearnedWords = allVocabulary.filter(word => {
+        return !word.isMastered && 
+               !word.lastReviewed; // 从未学习过
+      });
+      
+      // 打乱顺序并选择指定数量
+      shuffleArray(unlearnedWords);
+      return unlearnedWords.slice(0, count);
+    }
+    
+    // 更新卡片显示内容
+    function updateCardDisplay() {
+      if (dailyWords.length === 0 || currentWordIndex >= dailyWords.length) return;
+      
+      const currentWord = dailyWords[currentWordIndex];
+      
+      wordElement.textContent = currentWord.word;
+      wordBackElement.textContent = currentWord.word;
+      wordTypeElement.textContent = currentWord.type;
+      definitionElement.textContent = currentWord.definition;
+      exampleElement.textContent = currentWord.example;
+      exampleTranslationElement.textContent = currentWord.exampleTranslation;
+      
+      // 更新收藏按钮样式
+      if (currentWord.isFavorite) {
+        favoriteButton.classList.remove('text-gray-400');
+        favoriteButton.classList.add('text-warning');
+      } else {
+        favoriteButton.classList.remove('text-warning');
+        favoriteButton.classList.add('text-gray-400');
+      }
+      
+      // 更新已掌握按钮样式
+      updateMasterButton();
+      
+      // 显示/隐藏复习标记
+      const today = getDateString(new Date());
+      if (currentWord.nextReviewDate && currentWord.nextReviewDate <= today && !currentWord.isMastered) {
+        reviewBadge.classList.remove('hidden');
+      } else {
+        reviewBadge.classList.add('hidden');
+      }
+      
+      // 更新进度指示器
+      updateProgressIndicators();
+      
+      // 更新今日学习计数
+      updateDailyCounts();
+    }
+    
+    // 更新已掌握按钮样式
+    function updateMasterButton() {
+      const currentWord = dailyWords[currentWordIndex];
+      
+      if (currentWord.isMastered) {
+        masterButton.classList.remove('bg-gray-200', 'hover:bg-success');
+        masterButton.classList.add('bg-success', 'text-white', 'hover:bg-success/80');
+        masterButton.innerHTML = '<i class="fa fa-check mr-1"></i> 已掌握';
+      } else {
+        masterButton.classList.remove('bg-success', 'text-white', 'hover:bg-success/80');
+        masterButton.classList.add('bg-gray-200', 'hover:bg-success', 'hover:text-white');
+        masterButton.innerHTML = '<i class="fa fa-check mr-1"></i> 已掌握';
+      }
+      
+      // 更新难记按钮
+      if (currentWord.difficulty && currentWord.difficulty > 0) {
+        difficultButton.classList.remove('bg-gray-200', 'hover:bg-warning');
+        difficultButton.classList.add('bg-warning', 'text-white', 'hover:bg-warning/80');
+        difficultButton.innerHTML = '<i class="fa fa-exclamation mr-1"></i> 难记';
+      } else {
+        difficultButton.classList.remove('bg-warning', 'text-white', 'hover:bg-warning/80');
+        difficultButton.classList.add('bg-gray-200', 'hover:bg-warning', 'hover:text-white');
+        difficultButton.innerHTML = '<i class="fa fa-exclamation mr-1"></i> 难记';
+      }
+    }
+    
+    // 更新进度指示器
+    function updateProgressIndicators() {
+      const indicatorsContainer = document.getElementById('progress-indicators');
+      indicatorsContainer.innerHTML = '';
+      
+      // 为每个单词创建指示器
+      dailyWords.forEach((word, index) => {
+        const indicator = document.createElement('span');
+        indicator.className = 'w-2 h-2 rounded-full';
+        
+        // 当前单词
+        if (index === currentWordIndex) {
+          indicator.classList.add('ring-2', 'ring-offset-2', 'ring-accent');
+        }
+        
+        // 已掌握的单词
+        if (word.isMastered) {
+          indicator.classList.add('bg-success');
+        } 
+        // 需要复习的单词
+        else if (word.nextReviewDate && word.nextReviewDate <= getDateString(new Date())) {
+          indicator.classList.add('bg-复习');
+        } 
+        // 新单词
+        else if (!word.lastReviewed) {
+          indicator.classList.add('bg-accent');
+        } 
+        // 已学习但未掌握的单词
+        else {
+          indicator.classList.add('bg-gray-300');
+        }
+        
+        indicatorsContainer.appendChild(indicator);
+      });
+    }
+    
+    // 更新进度统计
+    function updateProgressStats() {
+      const totalWords = allVocabulary.length;
+      const masteredWords = allVocabulary.filter(word => word.isMastered).length;
+      const percentage = totalWords > 0 ? Math.round((masteredWords / totalWords) * 100) : 0;
+      
+      progressText.textContent = `${masteredWords}/${totalWords} (${percentage}%)`;
+      progressBar.style.width = `${percentage}%`;
+      
+      // 更新今日学习计数
+      updateDailyCounts();
+    }
+    
+    // 更新今日学习计数
+    function updateDailyCounts() {
+      const today = getDateString(new Date());
+      const todayRecord = dailyRecords.find(record => record.date === today);
+      
+      if (!todayRecord) return;
+      
+      // 计算今日已完成的新单词
+      const newWordsInPlan = dailyWords.filter(word => !word.lastReviewed);
+      const completedNewWords = newWordsInPlan.filter(word => word.isMastered).length;
+      
+      // 更新今日记录
+      todayRecord.completedNewWords = completedNewWords;
+      saveLearningData();
+      
+      // 更新显示
+      newWordsCountElement.textContent = `${completedNewWords}/${Math.min(newWordsInPlan.length, config.dailyNewWords)}`;
+      
+      // 复习单词数量
+      const reviewWordsCount = dailyWords.filter(word => 
+        word.lastReviewed && !word.isMastered && 
+        word.nextReviewDate && word.nextReviewDate <= today
+      ).length;
+      
+      reviewWordsCountElement.textContent = reviewWordsCount;
+    }
+    
+    // 标记单词为已掌握
+    function markAsMastered() {
+      const currentWord = dailyWords[currentWordIndex];
+      currentWord.isMastered = true;
+      currentWord.lastReviewed = getDateString(new Date());
+      currentWord.nextReviewDate = null; // 已掌握，不需要再复习
+      
+      // 更新今日新单词完成数
+      if (!currentWord.reviewCount) {
+        const today = getDateString(new Date());
+        const todayRecord = dailyRecords.find(record => record.date === today);
+        if (todayRecord) {
+          todayRecord.completedNewWords++;
+        }
+      }
+      
+      saveLearningData();
+      updateMasterButton();
+      updateProgressStats();
+      updateProgressIndicators();
+      
+      // 自动跳到下一个单词
+      setTimeout(() => {
+        nextButton.click();
+      }, 500);
+    }
+    
+    // 标记单词为难记
+    function markAsDifficult() {
+      const currentWord = dailyWords[currentWordIndex];
+      currentWord.difficulty = currentWord.difficulty ? 0 : 1; // 切换难记状态
+      
+      // 如果标记为难记，调整复习间隔
+      if (currentWord.difficulty) {
+        scheduleNextReview(currentWord, true);
+      }
+      
+      saveLearningData();
+      updateMasterButton();
+    }
+    
+    // 安排下一次复习
+    function scheduleNextReview(word, isDifficult = false) {
+      const today = new Date();
+      word.lastReviewed = getDateString(today);
+      word.reviewCount = (word.reviewCount || 0) + 1;
+      
+      // 根据记忆曲线和难度调整复习间隔
+      let intervalIndex = Math.min(word.reviewCount - 1, config.reviewIntervals.length - 1);
+      
+      // 难记的单词缩短复习间隔
+      if (isDifficult && intervalIndex > 0) {
+        intervalIndex--;
+      }
+      
+      // 计算下一次复习日期
+      const nextReview = new Date(today);
+      nextReview.setDate(today.getDate() + config.reviewIntervals[intervalIndex]);
+      word.nextReviewDate = getDateString(nextReview);
+      
+      // 未掌握
+      word.isMastered = false;
+    }
+    
+    // 显示空状态
+    function showEmptyState() {
+      wordElement.textContent = "恭喜！";
+      wordBackElement.textContent = "恭喜！";
+      wordTypeElement.textContent = "";
+      definitionElement.textContent = "你已经学习完所有单词了！";
+      exampleElement.textContent = "";
+      exampleTranslationElement.textContent = "";
+    }
+    
+    // 工具函数：获取日期字符串（YYYY-MM-DD）
+    function getDateString(date) {
+      return date.toISOString().split('T')[0];
+    }
+    
+    // 工具函数：打乱数组顺序
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    
+    // 事件监听器
+    function setupEventListeners() {
+      // 获取例句发音按钮
+      const playExampleAudioButton = document.getElementById('play-example-audio');
+
+      // 播放例句发音按钮点击事件
+      playExampleAudioButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        const example = dailyWords[currentWordIndex]?.example;
+        if (!example) return;
+        
+        // 检查浏览器是否支持语音合成API
+        if ('speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(example);
+          utterance.lang = 'en-US';
+          speechSynthesis.speak(utterance);
+          
+          playExampleAudioButton.classList.add('animate-pulse');
+          utterance.onend = () => {
+            playExampleAudioButton.classList.remove('animate-pulse');
+          };
+          utterance.onerror = () => {
+            playExampleAudioButton.classList.remove('animate-pulse');
+          };
+        } else {
+          playExampleAudioButton.classList.add('animate-pulse');
+          setTimeout(() => {
+            playExampleAudioButton.classList.remove('animate-pulse');
+          }, 1000);
+        }
+      });
+      // 卡片点击翻转 - 只在点击非按钮区域时触发
+      card.addEventListener('click', (e) => {
+        // 检查点击的是不是按钮或其内部元素
+        if (!e.target.closest('button')) {
+          cardContainer.classList.toggle('card-flipped');
+        }
+      });
+      
+      // 播放单词发音按钮点击事件
+      playAudioButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        const word = dailyWords[currentWordIndex]?.word;
+        if (!word) return;
+        
+        // 检查浏览器是否支持语音合成API
+        if ('speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(word);
+          utterance.lang = 'en-US';
+          speechSynthesis.speak(utterance);
+          
+          playAudioButton.classList.add('animate-pulse');
+          utterance.onend = () => {
+            playAudioButton.classList.remove('animate-pulse');
+          };
+          utterance.onerror = () => {
+            playAudioButton.classList.remove('animate-pulse');
+          };
+        } else {
+          playAudioButton.classList.add('animate-pulse');
+          setTimeout(() => {
+            playAudioButton.classList.remove('animate-pulse');
+          }, 1000);
+        }
+      });
+      
+      // 收藏按钮点击事件
+      favoriteButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (dailyWords.length === 0) return;
+        
+        const currentWord = dailyWords[currentWordIndex];
+        currentWord.isFavorite = !currentWord.isFavorite;
+        saveLearningData();
+        
+        if (currentWord.isFavorite) {
+          favoriteButton.classList.remove('text-gray-400');
+          favoriteButton.classList.add('text-warning');
+        } else {
+          favoriteButton.classList.remove('text-warning');
+          favoriteButton.classList.add('text-gray-400');
+        }
+      });
+      
+      // 标记已掌握按钮点击事件
+      masterButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (dailyWords.length === 0) return;
+        
+        const currentWord = dailyWords[currentWordIndex];
+        if (currentWord.isMastered) {
+          // 取消已掌握状态，重新加入复习计划
+          currentWord.isMastered = false;
+          scheduleNextReview(currentWord);
+        } else {
+          // 标记为已掌握
+          markAsMastered();
+        }
+        
+        saveLearningData();
+        updateMasterButton();
+        updateProgressStats();
+        updateProgressIndicators();
+      });
+      
+      // 标记难记按钮点击事件
+      difficultButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (dailyWords.length === 0) return;
+        
+        markAsDifficult();
+      });
+      
+      // 下一个单词按钮点击事件
+      nextButton.addEventListener('click', () => {
+        if (dailyWords.length === 0) return;
+        
+        // 确保卡片翻转回正面
+        cardContainer.classList.remove('card-flipped');
+        
+        // 如果当前单词未掌握且已学习过，安排下一次复习
+        const currentWord = dailyWords[currentWordIndex];
+        if (!currentWord.isMastered && currentWord.lastReviewed) {
+          scheduleNextReview(currentWord, currentWord.difficulty);
+          saveLearningData();
+        } 
+        // 如果是新单词，标记为已学习
+        else if (!currentWord.isMastered && !currentWord.lastReviewed) {
+          currentWord.lastReviewed = getDateString(new Date());
+          currentWord.reviewCount = 1;
+          scheduleNextReview(currentWord, currentWord.difficulty);
+          saveLearningData();
+        }
+        
+        // 计算下一个索引，考虑筛选条件
+        let nextIndex = (currentWordIndex + 1) % dailyWords.length;
+        
+        if (filterOptions.showReview || filterOptions.showNew) {
+          const startIndex = nextIndex;
+          while (true) {
+            const word = dailyWords[nextIndex];
+            const isReviewWord = word.nextReviewDate && word.nextReviewDate <= getDateString(new Date()) && !word.isMastered;
+            const isNewWord = !word.lastReviewed;
+            
+            // 检查是否符合筛选条件
+            if ((filterOptions.showReview && isReviewWord) || 
+                (filterOptions.showNew && isNewWord) ||
+                (!filterOptions.showReview && !filterOptions.showNew)) {
+              break;
+            }
+            
+            nextIndex = (nextIndex + 1) % dailyWords.length;
+            
+            // 如果所有单词都不符合条件，退出循环
+            if (nextIndex === startIndex) break;
+          }
+        }
+        
+        currentWordIndex = nextIndex;
+        updateCardDisplay();
+        
+        // 添加按钮点击动画
+        nextButton.classList.add('scale-95');
+        setTimeout(() => {
+          nextButton.classList.remove('scale-95');
+        }, 200);
+      });
+      
+      // 上一个单词按钮点击事件
+      prevButton.addEventListener('click', () => {
+        if (dailyWords.length === 0) return;
+        
+        // 确保卡片翻转回正面
+        cardContainer.classList.remove('card-flipped');
+        
+        // 计算上一个索引，考虑筛选条件
+        let prevIndex = (currentWordIndex - 1 + dailyWords.length) % dailyWords.length;
+        
+        if (filterOptions.showReview || filterOptions.showNew) {
+          const startIndex = prevIndex;
+          while (true) {
+            const word = dailyWords[prevIndex];
+            const isReviewWord = word.nextReviewDate && word.nextReviewDate <= getDateString(new Date()) && !word.isMastered;
+            const isNewWord = !word.lastReviewed;
+            
+            // 检查是否符合筛选条件
+            if ((filterOptions.showReview && isReviewWord) || 
+                (filterOptions.showNew && isNewWord) ||
+                (!filterOptions.showReview && !filterOptions.showNew)) {
+              break;
+            }
+            
+            prevIndex = (prevIndex - 1 + dailyWords.length) % dailyWords.length;
+            
+            // 如果所有单词都不符合条件，退出循环
+            if (prevIndex === startIndex) break;
+          }
+        }
+        
+        currentWordIndex = prevIndex;
+        updateCardDisplay();
+        
+        // 添加按钮点击动画
+        prevButton.classList.add('scale-95');
+        setTimeout(() => {
+          prevButton.classList.remove('scale-95');
+        }, 200);
+      });
+      
+      // 筛选复选框事件
+      showReviewCheckbox.addEventListener('change', () => {
+        filterOptions.showReview = showReviewCheckbox.checked;
+        if (filterOptions.showReview) {
+          showNewCheckbox.checked = false;
+          filterOptions.showNew = false;
+        }
+        updateCardDisplay();
+      });
+      
+      showNewCheckbox.addEventListener('change', () => {
+        filterOptions.showNew = showNewCheckbox.checked;
+        if (filterOptions.showNew) {
+          showReviewCheckbox.checked = false;
+          filterOptions.showReview = false;
+        }
+        updateCardDisplay();
+      });
+      
+      // 重置进度按钮事件
+      resetProgressButton.addEventListener('click', () => {
+        if (confirm('确定要重置所有学习进度吗？这将清除所有已掌握和复习记录。')) {
+          // 重置所有单词状态
+          allVocabulary.forEach(word => {
+            word.isMastered = false;
+            word.isFavorite = false;
+            word.difficulty = 0;
+            word.lastReviewed = null;
+            word.reviewCount = 0;
+            word.nextReviewDate = null;
+          });
+          
+          // 清除每日记录
+          dailyRecords = [];
+          
+          // 重新准备今日学习计划
+          prepareDailyWords();
+          
+          // 重置当前索引
+          currentWordIndex = 0;
+          
+          // 更新UI
+          updateCardDisplay();
+          updateProgressStats();
+          
+          // 保存更改
+          saveLearningData();
+        }
+      });
+      
+      // 添加键盘导航支持
+      document.addEventListener('keydown', (event) => {
+        if (event.target.closest('input') || event.target.closest('textarea')) return;
+        
+        if (event.key === 'ArrowRight') {
+          nextButton.click();
+        } else if (event.key === 'ArrowLeft') {
+          prevButton.click();
+        } else if (event.key === ' ') {
+          // 空格键翻转卡片
+          cardContainer.classList.toggle('card-flipped');
+        } else if (event.key.toLowerCase() === 'm') {
+          // M键标记已掌握
+          masterButton.click();
+        } else if (event.key.toLowerCase() === 'f') {
+          // F键收藏
+          favoriteButton.click();
+        } else if (event.key.toLowerCase() === 'd') {
+          // D键标记难记
+          difficultButton.click();
+        }
+      });
+    }
+    
+    // 启动应用
+    window.addEventListener('DOMContentLoaded', () => {
+      setupEventListeners();
+      initApp();
+    });
+  </script>
+</body>
+</html>
+    

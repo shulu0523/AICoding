@@ -1,0 +1,142 @@
+[
+  {
+    "word": "apple",
+    "type": "n.",
+    "definition": "苹果",
+    "example": "I like to eat apples.",
+    "exampleTranslation": "我喜欢吃苹果。"
+  },
+  {
+    "word": "banana",
+    "type": "n.",
+    "definition": "香蕉",
+    "example": "The banana is yellow.",
+    "exampleTranslation": "香蕉是黄色的。"
+  },
+  {
+    "word": "cat",
+    "type": "n.",
+    "definition": "猫",
+    "example": "The cat is cute.",
+    "exampleTranslation": "这只猫很可爱。"
+  },
+  {
+    "word": "dog",
+    "type": "n.",
+    "definition": "狗",
+    "example": "The dog is running.",
+    "exampleTranslation": "狗在跑。"
+  },
+  {
+    "word": "red",
+    "type": "adj.",
+    "definition": "红色的",
+    "example": "The flower is red.",
+    "exampleTranslation": "花是红色的。"
+  },
+  {
+    "word": "blue",
+    "type": "adj.",
+    "definition": "蓝色的",
+    "example": "The sky is blue.",
+    "exampleTranslation": "天空是蓝色的。"
+  },
+  {
+    "word": "one",
+    "type": "num.",
+    "definition": "一",
+    "example": "I have one book.",
+    "exampleTranslation": "我有一本书。"
+  },
+  {
+    "word": "two",
+    "type": "num.",
+    "definition": "二",
+    "example": "There are two birds.",
+    "exampleTranslation": "有两只鸟。"
+  },
+  {
+    "word": "hello",
+    "type": "interj.",
+    "definition": "你好",
+    "example": "Hello, my name is Tom.",
+    "exampleTranslation": "你好，我叫汤姆。"
+  },
+  {
+    "word": "goodbye",
+    "type": "interj.",
+    "definition": "再见",
+    "example": "Goodbye, see you tomorrow.",
+    "exampleTranslation": "再见，明天见。"
+  },
+  {
+    "word": "book",
+    "type": "n.",
+    "definition": "书",
+    "example": "I like to read books.",
+    "exampleTranslation": "我喜欢读书。"
+  },
+  {
+    "word": "pen",
+    "type": "n.",
+    "definition": "钢笔",
+    "example": "I write with a pen.",
+    "exampleTranslation": "我用钢笔写字。"
+  },
+  {
+    "word": "school",
+    "type": "n.",
+    "definition": "学校",
+    "example": "I go to school every day.",
+    "exampleTranslation": "我每天去上学。"
+  },
+  {
+    "word": "teacher",
+    "type": "n.",
+    "definition": "老师",
+    "example": "My teacher is nice.",
+    "exampleTranslation": "我的老师很好。"
+  },
+  {
+    "word": "student",
+    "type": "n.",
+    "definition": "学生",
+    "example": "I am a student.",
+    "exampleTranslation": "我是一名学生。"
+  },
+  {
+    "word": "friend",
+    "type": "n.",
+    "definition": "朋友",
+    "example": "He is my friend.",
+    "exampleTranslation": "他是我的朋友。"
+  },
+  {
+    "word": "water",
+    "type": "n.",
+    "definition": "水",
+    "example": "I drink water every day.",
+    "exampleTranslation": "我每天喝水。"
+  },
+  {
+    "word": "milk",
+    "type": "n.",
+    "definition": "牛奶",
+    "example": "I like to drink milk.",
+    "exampleTranslation": "我喜欢喝牛奶。"
+  },
+  {
+    "word": "eat",
+    "type": "v.",
+    "definition": "吃",
+    "example": "I eat breakfast in the morning.",
+    "exampleTranslation": "我早上吃早餐。"
+  },
+  {
+    "word": "drink",
+    "type": "v.",
+    "definition": "喝",
+    "example": "I drink juice.",
+    "exampleTranslation": "我喝果汁。"
+  }
+]
