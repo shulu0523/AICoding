@@ -438,59 +438,83 @@
       });
 
       // 播放单词发音按钮点击事件
-      playAudioButton.addEventListener('click', (e) => {
+      playAudioButton.addEventListener('click', async (e) => {
         e.stopPropagation();
 
         const word = dailyWords[currentWordIndex]?.word;
         if (!word) return;
 
-        // 检查浏览器是否支持语音合成API
-        if ('speechSynthesis' in window) {
-          const utterance = new SpeechSynthesisUtterance(word);
-          utterance.lang = 'en-US';
-          speechSynthesis.speak(utterance);
+        playAudioButton.classList.add('animate-pulse');
 
-          playAudioButton.classList.add('animate-pulse');
-          utterance.onend = () => {
-            playAudioButton.classList.remove('animate-pulse');
-          };
-          utterance.onerror = () => {
-            playAudioButton.classList.remove('animate-pulse');
-          };
-        } else {
-          playAudioButton.classList.add('animate-pulse');
-          setTimeout(() => {
-            playAudioButton.classList.remove('animate-pulse');
-          }, 1000);
+        try {
+          // 优先尝试使用Web Speech API
+          if ('speechSynthesis' in window) {
+            // 检查语音合成是否准备就绪
+            if (speechSynthesis.pending || speechSynthesis.speaking) {
+              speechSynthesis.cancel();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(word);
+            utterance.lang = 'en-US';
+            utterance.volume = 1;
+            utterance.rate = 0.8;  // 降低语速，更适合学习
+
+            // 使用Promise包装语音合成
+            await new Promise((resolve, reject) => {
+              utterance.onend = resolve;
+              utterance.onerror = reject;
+              speechSynthesis.speak(utterance);
+            });
+          } else {
+            // 如果不支持Web Speech API，显示提示
+            alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+          }
+        } catch (error) {
+          console.error('语音播放失败:', error);
+          alert('无法播放声音，请重试或检查网络连接。');
+        } finally {
+          playAudioButton.classList.remove('animate-pulse');
         }
       });
 
       // 播放例句发音按钮点击事件
       const playExampleAudioButton = document.getElementById('play-example-audio');
-      playExampleAudioButton.addEventListener('click', (e) => {
+      playExampleAudioButton.addEventListener('click', async (e) => {
         e.stopPropagation();
 
         const example = dailyWords[currentWordIndex]?.example;
         if (!example) return;
 
-        // 检查浏览器是否支持语音合成API
-        if ('speechSynthesis' in window) {
-          const utterance = new SpeechSynthesisUtterance(example);
-          utterance.lang = 'en-US';
-          speechSynthesis.speak(utterance);
+        playExampleAudioButton.classList.add('animate-pulse');
 
-          playExampleAudioButton.classList.add('animate-pulse');
-          utterance.onend = () => {
-            playExampleAudioButton.classList.remove('animate-pulse');
-          };
-          utterance.onerror = () => {
-            playExampleAudioButton.classList.remove('animate-pulse');
-          };
-        } else {
-          playExampleAudioButton.classList.add('animate-pulse');
-          setTimeout(() => {
-            playExampleAudioButton.classList.remove('animate-pulse');
-          }, 1000);
+        try {
+          // 优先尝试使用Web Speech API
+          if ('speechSynthesis' in window) {
+            // 检查语音合成是否准备就绪
+            if (speechSynthesis.pending || speechSynthesis.speaking) {
+              speechSynthesis.cancel();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(example);
+            utterance.lang = 'en-US';
+            utterance.volume = 1;
+            utterance.rate = 0.8;  // 降低语速，更适合学习
+
+            // 使用Promise包装语音合成
+            await new Promise((resolve, reject) => {
+              utterance.onend = resolve;
+              utterance.onerror = reject;
+              speechSynthesis.speak(utterance);
+            });
+          } else {
+            // 如果不支持Web Speech API，显示提示
+            alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+          }
+        } catch (error) {
+          console.error('语音播放失败:', error);
+          alert('无法播放声音，请重试或检查网络连接。');
+        } finally {
+          playExampleAudioButton.classList.remove('animate-pulse');
         }
       });
 
@@ -519,7 +543,7 @@
     // 注册Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
           .then((registration) => {
             console.log('ServiceWorker 注册成功: ', registration.scope);
           })
@@ -528,6 +552,33 @@
           });
       });
     }
+
+    // 添加移动设备声音播放优化
+    document.addEventListener('DOMContentLoaded', () => {
+      // 提示用户在iOS上需要点击页面才能激活声音
+      if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+        // 创建一个一次性的点击事件监听器来激活音频上下文
+        const unlockAudio = () => {
+          // 尝试播放一个静默的声音来解锁音频上下文
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          gainNode.gain.value = 0;
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.1);
+
+          // 移除监听器
+          document.removeEventListener('click', unlockAudio);
+          document.removeEventListener('touchstart', unlockAudio);
+        };
+
+        // 添加点击和触摸事件监听器
+        document.addEventListener('click', unlockAudio);
+        document.addEventListener('touchstart', unlockAudio);
+      }
+    });
 
     // 启动应用
     window.addEventListener('DOMContentLoaded', () => {
