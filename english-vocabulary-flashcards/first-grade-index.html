@@ -447,27 +447,35 @@
         playAudioButton.classList.add('animate-pulse');
 
         try {
-          // 优先尝试使用Web Speech API
-          if ('speechSynthesis' in window) {
-            // 检查语音合成是否准备就绪
-            if (speechSynthesis.pending || speechSynthesis.speaking) {
-              speechSynthesis.cancel();
-            }
+          // 检测是否为微信浏览器
+          const isWeChatBrowser = /MicroMessenger/i.test(navigator.userAgent);
 
-            const utterance = new SpeechSynthesisUtterance(word);
-            utterance.lang = 'en-US';
-            utterance.volume = 1;
-            utterance.rate = 0.8;  // 降低语速，更适合学习
-
-            // 使用Promise包装语音合成
-            await new Promise((resolve, reject) => {
-              utterance.onend = resolve;
-              utterance.onerror = reject;
-              speechSynthesis.speak(utterance);
-            });
+          if (isWeChatBrowser && window.wechatAudioPlay) {
+            // 使用微信专用播放函数
+            await window.wechatAudioPlay(word);
           } else {
-            // 如果不支持Web Speech API，显示提示
-            alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+            // 优先尝试使用Web Speech API
+            if ('speechSynthesis' in window) {
+              // 检查语音合成是否准备就绪
+              if (speechSynthesis.pending || speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+              }
+
+              const utterance = new SpeechSynthesisUtterance(word);
+              utterance.lang = 'en-US';
+              utterance.volume = 1;
+              utterance.rate = 0.8;  // 降低语速，更适合学习
+
+              // 使用Promise包装语音合成
+              await new Promise((resolve, reject) => {
+                utterance.onend = resolve;
+                utterance.onerror = reject;
+                speechSynthesis.speak(utterance);
+              });
+            } else {
+              // 如果不支持Web Speech API，显示提示
+              alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+            }
           }
         } catch (error) {
           console.error('语音播放失败:', error);
@@ -488,27 +496,35 @@
         playExampleAudioButton.classList.add('animate-pulse');
 
         try {
-          // 优先尝试使用Web Speech API
-          if ('speechSynthesis' in window) {
-            // 检查语音合成是否准备就绪
-            if (speechSynthesis.pending || speechSynthesis.speaking) {
-              speechSynthesis.cancel();
-            }
+          // 检测是否为微信浏览器
+          const isWeChatBrowser = /MicroMessenger/i.test(navigator.userAgent);
 
-            const utterance = new SpeechSynthesisUtterance(example);
-            utterance.lang = 'en-US';
-            utterance.volume = 1;
-            utterance.rate = 0.8;  // 降低语速，更适合学习
-
-            // 使用Promise包装语音合成
-            await new Promise((resolve, reject) => {
-              utterance.onend = resolve;
-              utterance.onerror = reject;
-              speechSynthesis.speak(utterance);
-            });
+          if (isWeChatBrowser && window.wechatAudioPlay) {
+            // 使用微信专用播放函数
+            await window.wechatAudioPlay(example, true);
           } else {
-            // 如果不支持Web Speech API，显示提示
-            alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+            // 优先尝试使用Web Speech API
+            if ('speechSynthesis' in window) {
+              // 检查语音合成是否准备就绪
+              if (speechSynthesis.pending || speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+              }
+
+              const utterance = new SpeechSynthesisUtterance(example);
+              utterance.lang = 'en-US';
+              utterance.volume = 1;
+              utterance.rate = 0.8;  // 降低语速，更适合学习
+
+              // 使用Promise包装语音合成
+              await new Promise((resolve, reject) => {
+                utterance.onend = resolve;
+                utterance.onerror = reject;
+                speechSynthesis.speak(utterance);
+              });
+            } else {
+              // 如果不支持Web Speech API，显示提示
+              alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+            }
           }
         } catch (error) {
           console.error('语音播放失败:', error);
@@ -553,30 +569,91 @@
       });
     }
 
-    // 添加移动设备声音播放优化
+    // 添加移动设备和微信浏览器声音播放优化
     document.addEventListener('DOMContentLoaded', () => {
-      // 提示用户在iOS上需要点击页面才能激活声音
-      if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
-        // 创建一个一次性的点击事件监听器来激活音频上下文
+      // 检测是否为微信浏览器
+      const isWeChatBrowser = /MicroMessenger/i.test(navigator.userAgent);
+      let audioContext = null;
+
+      // 初始化音频上下文的函数
+      function initAudioContext() {
+        if (!audioContext) {
+          try {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            // 创建一个静默的声音来初始化音频上下文
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            gainNode.gain.value = 0;
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.1);
+          } catch (e) {
+            console.error('无法初始化音频上下文:', e);
+          }
+        }
+      }
+
+      // 为所有移动设备添加触摸事件监听器以激活音频上下文
+      if (/(iPhone|iPad|iPod|Android)/i.test(navigator.userAgent)) {
+        // 创建一个一次性的事件监听器来激活音频上下文
         const unlockAudio = () => {
-          // 尝试播放一个静默的声音来解锁音频上下文
-          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-          const oscillator = audioContext.createOscillator();
-          const gainNode = audioContext.createGain();
-          gainNode.gain.value = 0;
-          oscillator.connect(gainNode);
-          gainNode.connect(audioContext.destination);
-          oscillator.start();
-          oscillator.stop(audioContext.currentTime + 0.1);
+          initAudioContext();
 
           // 移除监听器
           document.removeEventListener('click', unlockAudio);
           document.removeEventListener('touchstart', unlockAudio);
+          document.removeEventListener('touchend', unlockAudio);
         };
 
-        // 添加点击和触摸事件监听器
+        // 添加多个事件监听器以确保捕获用户交互
         document.addEventListener('click', unlockAudio);
         document.addEventListener('touchstart', unlockAudio);
+        document.addEventListener('touchend', unlockAudio);
+      }
+
+      // 微信浏览器特殊处理
+      if (isWeChatBrowser) {
+        // 提示用户点击页面激活声音
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg z-50';
+        toast.textContent = '点击页面任意位置激活声音';
+        document.body.appendChild(toast);
+
+        // 3秒后隐藏提示
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 500);
+        }, 3000);
+
+        // 为微信浏览器添加额外的音频播放处理
+        window.wechatAudioPlay = function(text, isExample = false) {
+          // 确保音频上下文已初始化
+          initAudioContext();
+
+          // 微信可能不支持SpeechSynthesis，这里提供一个简单的回退方案
+          if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            utterance.volume = 1;
+            utterance.rate = 0.8;
+
+            return new Promise((resolve, reject) => {
+              utterance.onend = resolve;
+              utterance.onerror = reject;
+              speechSynthesis.speak(utterance);
+            });
+          } else {
+            // 如果不支持语音合成，尝试使用音频元素（假设我们有预生成的音频文件）
+            // 这里只是一个示例，实际应用中需要生成对应的音频文件
+            console.warn('微信浏览器不支持语音合成');
+            // 显示一个提示，说明在微信浏览器中可能无法播放声音
+            alert('在微信浏览器中播放声音可能受限，请尝试使用其他浏览器。');
+            return Promise.resolve();
+          }
+        };
       }
     });
 
