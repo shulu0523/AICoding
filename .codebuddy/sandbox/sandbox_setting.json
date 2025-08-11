@@ -1,0 +1,20 @@
+{
+  "path": "/Users/steven/works/AI/AICoding/deploy-flashcards",
+  "desc": "这是一个英语词汇闪卡应用，用于学习英语单词。应用包含单词列表、定义和例句，支持PWA功能。",
+  "id": "c9503578ada24d44974cb0fe7faeff6a",
+  "data": {
+    "spaceKey": "c9503578ada24d44974cb0fe7faeff6a",
+    "connections": {
+      "webIDE": "https://c9503578ada24d44974cb0fe7faeff6a.ap-singapore.cloudstudio.club",
+      "preview": "https://c9503578ada24d44974cb0fe7faeff6a--{port}.ap-singapore.cloudstudio.club",
+      "api": "https://c9503578ada24d44974cb0fe7faeff6a--api.ap-singapore.cloudstudio.club",
+      "pty": "https://c9503578ada24d44974cb0fe7faeff6a--pty.ap-singapore.cloudstudio.club"
+    }
+  },
+  "config": {
+    "api": "https://c9503578ada24d44974cb0fe7faeff6a--api.ap-singapore.cloudstudio.club",
+    "pty": "https://c9503578ada24d44974cb0fe7faeff6a--pty.ap-singapore.cloudstudio.club",
+    "region": "ap-shanghai",
+    "spaceKey": "c9503578ada24d44974cb0fe7faeff6a"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON加载测试</title>
+</head>
+<body>
+    <h1>JSON加载测试</h1>
+    <div id="result"></div>
+
+    <script>
+        async function testJsonLoading() {
+            const resultDiv = document.getElementById('result');
+            try {
+                resultDiv.innerHTML = '正在加载vocabulary.json...';
+                const response = await fetch('vocabulary.json');
+                resultDiv.innerHTML += `<br>请求状态: ${response.status}`;
+                
+                if (!response.ok) {
+                    throw new Error(`请求失败: ${response.statusText}`);
+                }
+                
+                const text = await response.text();
+                resultDiv.innerHTML += `<br>获取到数据文本，长度: ${text.length}`;
+                resultDiv.innerHTML += `<br>文本开头: ${text.substring(0, 50)}`;
+                resultDiv.innerHTML += `<br>文本结尾: ${text.substring(text.length - 50)}`;
+                
+                try {
+                    const data = JSON.parse(text);
+                    resultDiv.innerHTML += `<br>JSON解析成功，单词数量: ${data.length}`;
+                    resultDiv.innerHTML += `<br>第一个单词: ${JSON.stringify(data[0])}`;
+                    resultDiv.innerHTML += `<br>最后一个单词: ${JSON.stringify(data[data.length - 1])}`;
+                } catch (jsonError) {
+                    resultDiv.innerHTML += `<br>JSON解析错误: ${jsonError.message}`;
+                    resultDiv.innerHTML += `<br>错误位置: ${jsonError.position}`;
+                    const errorContext = text.substring(
+                        Math.max(0, jsonError.position - 50), 
+                        Math.min(text.length, jsonError.position + 50)
+                    );
+                    resultDiv.innerHTML += `<br>错误位置附近的文本: ${errorContext}`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML += `<br>加载错误: ${error.message}`;
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', testJsonLoading);
+    </script>
+</body>
+</html>

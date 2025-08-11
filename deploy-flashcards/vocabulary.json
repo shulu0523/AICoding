@@ -1,0 +1,2957 @@
+[
+  {
+    "word": "aberrant",
+    "type": "adj.",
+    "definition": "脱离常轨的；异常的",
+    "example": "His aberrant behavior raised concerns among his friends.",
+    "exampleTranslation": "他的异常行为引起了朋友们的担忧。"
+  },
+  {
+    "word": "aberration",
+    "type": "n.",
+    "definition": "偏差；脱离常轨；心理失常",
+    "example": "His behavior was an aberration from his usual calm self.",
+    "exampleTranslation": "他的行为与平时的冷静大相径庭。"
+  },
+  {
+    "word": "abeyance",
+    "type": "n.",
+    "definition": "暂时搁置；中止",
+    "example": "The project is currently in abeyance.",
+    "exampleTranslation": "该项目目前处于暂停状态。"
+  },
+  {
+    "word": "abjure",
+    "type": "v.",
+    "definition": "发誓放弃；宣誓弃绝",
+    "example": "He abjured his former religious beliefs.",
+    "exampleTranslation": "他宣誓放弃了以前的宗教信仰。"
+  },
+  {
+    "word": "ablution",
+    "type": "n.",
+    "definition": "沐浴；净身；（宗教的）洗礼",
+    "example": "The priest performed his ablutions before Mass.",
+    "exampleTranslation": "牧师在弥撒前进行了净身仪式。"
+  },
+  {
+    "word": "abnegation",
+    "type": "n.",
+    "definition": "放弃；克制；自我牺牲",
+    "example": "The monk's life required great abnegation.",
+    "exampleTranslation": "僧侣的生活需要极大的克制。"
+  },
+  {
+    "word": "abominate",
+    "type": "v.",
+    "definition": "痛恨；憎恶",
+    "example": "She abominated cruelty to animals.",
+    "exampleTranslation": "她痛恨虐待动物的行为。"
+  },
+  {
+    "word": "aboriginal",
+    "type": "adj.",
+    "definition": "土著的；原始的",
+    "example": "The aboriginal people of Australia have a rich cultural heritage.",
+    "exampleTranslation": "澳大利亚的原住民拥有丰富的文化遗产。"
+  },
+  {
+    "word": "abortive",
+    "type": "adj.",
+    "definition": "失败的；流产的",
+    "example": "Their attempt to climb the mountain was abortive due to bad weather.",
+    "exampleTranslation": "由于天气恶劣，他们攀登这座山的尝试失败了。"
+  },
+  {
+    "word": "abrade",
+    "type": "v.",
+    "definition": "磨损；擦伤",
+    "example": "The rough surface abraded his skin.",
+    "exampleTranslation": "粗糙的表面擦伤了他的皮肤。"
+  },
+  {
+    "word": "abrogate",
+    "type": "v.",
+    "definition": "废除；取消",
+    "example": "The government decided to abrogate the treaty.",
+    "exampleTranslation": "政府决定废除该条约。"
+  },
+  {
+    "word": "abstemious",
+    "type": "adj.",
+    "definition": "节制的；节俭的",
+    "example": "He led an abstemious life, rarely drinking alcohol.",
+    "exampleTranslation": "他过着节制的生活，很少饮酒。"
+  },
+  {
+    "word": "abstinence",
+    "type": "n.",
+    "definition": "节制；禁欲",
+    "example": "He practiced abstinence from alcohol for health reasons.",
+    "exampleTranslation": "出于健康原因，他戒酒了。"
+  },
+  {
+    "word": "abstruse",
+    "type": "adj.",
+    "definition": "深奥的；难懂的",
+    "example": "The philosopher's ideas were too abstruse for most people.",
+    "exampleTranslation": "这位哲学家的思想对大多数人来说太晦涩了。"
+  },
+  {
+    "word": "abundant",
+    "type": "adj.",
+    "definition": "丰富的；充裕的",
+    "example": "The region is abundant in natural resources.",
+    "exampleTranslation": "该地区自然资源丰富。"
+  },
+  {
+    "word": "abuse",
+    "type": "v.",
+    "definition": "滥用；虐待",
+    "example": "He abused his power by taking bribes.",
+    "exampleTranslation": "他滥用权力收受贿赂。"
+  },
+  {
+    "word": "abysmal",
+    "type": "adj.",
+    "definition": "极坏的；糟透的",
+    "example": "The service at the restaurant was abysmal.",
+    "exampleTranslation": "这家餐馆的服务极差。"
+  },
+  {
+    "word": "academic",
+    "type": "adj.",
+    "definition": "学术的；理论的",
+    "example": "She has an academic background in psychology.",
+    "exampleTranslation": "她有心理学的学术背景。"
+  },
+  {
+    "word": "academy",
+    "type": "n.",
+    "definition": "学院；学会",
+    "example": "He was elected to the Academy of Sciences.",
+    "exampleTranslation": "他被选入科学院。"
+  },
+  {
+    "word": "accede",
+    "type": "v.",
+    "definition": "同意；加入",
+    "example": "The government acceded to the protesters' demands.",
+    "exampleTranslation": "政府同意了抗议者的要求。"
+  },
+  {
+    "word": "accelerate",
+    "type": "v.",
+    "definition": "加速；促进",
+    "example": "The car accelerated quickly down the highway.",
+    "exampleTranslation": "汽车在高速公路上迅速加速。"
+  },
+  {
+    "word": "accessible",
+    "type": "adj.",
+    "definition": "可到达的；易接近的",
+    "example": "The museum is accessible to wheelchair users.",
+    "exampleTranslation": "该博物馆对轮椅使用者开放。"
+  },
+  {
+    "word": "accessory",
+    "type": "n.",
+    "definition": "附件；配件",
+    "example": "The smartphone comes with several accessories, including a charger and earphones.",
+    "exampleTranslation": "这款智能手机配备了几个配件，包括充电器和耳机。"
+  },
+  {
+    "word": "accidental",
+    "type": "adj.",
+    "definition": "意外的；偶然的",
+    "example": "The meeting was accidental; we didn't plan to see each other.",
+    "exampleTranslation": "这次会面是偶然的；我们没打算见面。"
+  },
+  {
+    "word": "acclaim",
+    "type": "v.",
+    "definition": "称赞；喝彩",
+    "example": "The new film was acclaimed by critics.",
+    "exampleTranslation": "这部新电影受到评论家的热烈赞扬。"
+  },
+  {
+    "word": "accommodate",
+    "type": "v.",
+    "definition": "容纳；适应",
+    "example": "The hotel can accommodate up to 200 guests.",
+    "exampleTranslation": "这家酒店最多可容纳200位客人。"
+  },
+  {
+    "word": "accompaniment",
+    "type": "n.",
+    "definition": "伴奏；伴随物",
+    "example": "The pianist played a beautiful accompaniment to the singer's voice.",
+    "exampleTranslation": "钢琴家为歌手的声音演奏了优美的伴奏。"
+  },
+  {
+    "word": "accompany",
+    "type": "v.",
+    "definition": "陪伴；陪同",
+    "example": "She accompanied her friend to the doctor's office.",
+    "exampleTranslation": "她陪朋友去了医生办公室。"
+  },
+  {
+    "word": "accomplish",
+    "type": "v.",
+    "definition": "完成；实现",
+    "example": "They worked hard to accomplish their goals.",
+    "exampleTranslation": "他们努力工作以实现自己的目标。"
+  },
+  {
+    "word": "accord",
+    "type": "n.",
+    "definition": "协议；一致",
+    "example": "The two countries reached an accord on trade.",
+    "exampleTranslation": "两国就贸易达成了协议。"
+  },
+  {
+    "word": "account",
+    "type": "n.",
+    "definition": "账户；描述",
+    "example": "She gave a detailed account of the accident.",
+    "exampleTranslation": "她详细描述了事故的经过。"
+  },
+  {
+    "word": "accountant",
+    "type": "n.",
+    "definition": "会计；会计师",
+    "example": "We hired an accountant to help with our taxes.",
+    "exampleTranslation": "我们雇了一名会计来帮助处理税务。"
+  },
+  {
+    "word": "accumulate",
+    "type": "v.",
+    "definition": "积累；积聚",
+    "example": "Dust tends to accumulate on unused furniture.",
+    "exampleTranslation": "灰尘容易在未使用的家具上堆积。"
+  },
+  {
+    "word": "accuracy",
+    "type": "n.",
+    "definition": "准确性；精确性",
+    "example": "The accuracy of the measurement is crucial.",
+    "exampleTranslation": "测量的准确性至关重要。"
+  },
+  {
+    "word": "accurate",
+    "type": "adj.",
+    "definition": "准确的；精确的",
+    "example": "The weather forecast was surprisingly accurate.",
+    "exampleTranslation": "天气预报出奇地准确。"
+  },
+  {
+    "word": "accuse",
+    "type": "v.",
+    "definition": "指控；指责",
+    "example": "He was accused of stealing money from the company.",
+    "exampleTranslation": "他被指控从公司偷钱。"
+  },
+  {
+    "word": "accustom",
+    "type": "v.",
+    "definition": "使习惯；使适应",
+    "example": "It took her a while to accustom herself to the new job.",
+    "exampleTranslation": "她花了一段时间才适应新工作。"
+  },
+  {
+    "word": "ache",
+    "type": "n.",
+    "definition": "疼痛；隐痛",
+    "example": "I have a dull ache in my lower back.",
+    "exampleTranslation": "我的下背部隐隐作痛。"
+  },
+  {
+    "word": "achieve",
+    "type": "v.",
+    "definition": "实现；达到",
+    "example": "She worked hard to achieve her dream of becoming a doctor.",
+    "exampleTranslation": "她努力实现成为医生的梦想。"
+  },
+  {
+    "word": "achievement",
+    "type": "n.",
+    "definition": "成就；成绩",
+    "example": "Winning the championship was a great achievement.",
+    "exampleTranslation": "赢得冠军是一项伟大的成就。"
+  },
+  {
+    "word": "acid",
+    "type": "adj.",
+    "definition": "酸的；酸性的",
+    "example": "Lemon juice is acidic and can be used to clean copper.",
+    "exampleTranslation": "柠檬汁呈酸性，可用于清洁铜器。"
+  },
+  {
+    "word": "acknowledge",
+    "type": "v.",
+    "definition": "承认；确认",
+    "example": "He acknowledged his mistake and apologized.",
+    "exampleTranslation": "他承认了错误并道歉。"
+  },
+  {
+    "word": "aberrant",
+    "type": "adj.",
+    "definition": "departing from an accepted standard",
+    "example": "His aberrant behavior raised concerns among his friends.",
+    "exampleTranslation": "他的异常行为引起了朋友们的担忧。"
+  },
+  {
+    "word": "aberration",
+    "type": "n.",
+    "definition": "a departure from what is normal, usual, or expected, typically an unwelcome one",
+    "example": "His behavior was an aberration from his usual calm self.",
+    "exampleTranslation": "他的行为与平时的冷静大相径庭。"
+  },
+  {
+    "word": "abeyance",
+    "type": "n.",
+    "definition": "a state of temporary disuse or suspension",
+    "example": "The project is currently in abeyance.",
+    "exampleTranslation": "该项目目前处于暂停状态。"
+  },
+  {
+    "word": "abjure",
+    "type": "v.",
+    "definition": "solemnly renounce (a belief, cause, or claim)",
+    "example": "He abjured his former religious beliefs.",
+    "exampleTranslation": "他宣誓放弃了以前的宗教信仰。"
+  },
+  {
+    "word": "acerbic",
+    "type": "adj.",
+    "definition": "sharp and forthright",
+    "example": "His acerbic comments offended some people.",
+    "exampleTranslation": "他尖刻的评论冒犯了一些人。"
+  },
+  {
+    "word": "achieve",
+    "type": "v.",
+    "definition": "successfully bring about or reach (a desired objective or result) by effort, skill, or courage",
+    "example": "She worked hard to achieve her dream of becoming a doctor.",
+    "exampleTranslation": "她努力实现成为医生的梦想。"
+  },
+  {
+    "word": "acquaintance",
+    "type": "n.",
+    "definition": "knowledge or experience of something",
+    "example": "I have some acquaintance with Japanese culture.",
+    "exampleTranslation": "我对日本文化有一些了解。"
+  },
+  {
+    "word": "acquire",
+    "type": "v.",
+    "definition": "buy or obtain (an asset or object) for oneself",
+    "example": "She acquired a valuable painting at the auction.",
+    "exampleTranslation": "她在拍卖会上获得了一幅珍贵的画。"
+  },
+  {
+    "word": "acquit",
+    "type": "v.",
+    "definition": "free (someone) from a criminal charge by a verdict of not guilty",
+    "example": "He was acquitted of all charges.",
+    "exampleTranslation": "他被宣告所有指控不成立。"
+  },
+  {
+    "word": "acquittal",
+    "type": "n.",
+    "definition": "a judgment or verdict that a person is not guilty of the crime with which they have been charged",
+    "example": "The jury returned a verdict of acquittal.",
+    "exampleTranslation": "陪审团作出了无罪裁决。"
+  },
+  {
+    "word": "acrid",
+    "type": "adj.",
+    "definition": "having an irritatingly strong and unpleasant taste or smell",
+    "example": "The acrid smoke made our eyes water.",
+    "exampleTranslation": "辛辣的烟雾使我们的眼睛流泪。"
+  },
+  {
+    "word": "acrimonious",
+    "type": "adj.",
+    "definition": "(typically of speech or discussion) angry and bitter",
+    "example": "Their divorce was acrimonious and costly.",
+    "exampleTranslation": "他们的离婚充满了怨恨，代价高昂。"
+  },
+  {
+    "word": "acumen",
+    "type": "n.",
+    "definition": "the ability to make good judgments and take quick decisions",
+    "example": "She has great business acumen.",
+    "exampleTranslation": "她有很强的商业头脑。"
+  },
+  {
+    "word": "acute",
+    "type": "adj.",
+    "definition": "(of an unpleasant or unwelcome situation or phenomenon) present or experienced to a severe or intense degree",
+    "example": "The problem has become acute in recent years.",
+    "exampleTranslation": "这个问题近年来变得十分严重。"
+  },
+  {
+    "word": "adamant",
+    "type": "adj.",
+    "definition": "refusing to be persuaded or to change one's mind",
+    "example": "He was adamant that he was innocent.",
+    "exampleTranslation": "他坚称自己是无辜的。"
+  },
+  {
+    "word": "adapt",
+    "type": "v.",
+    "definition": "make (something) suitable for a new use or purpose; modify",
+    "example": "We need to adapt our plans to the new situation.",
+    "exampleTranslation": "我们需要调整计划以适应新情况。"
+  },
+  {
+    "word": "adaptation",
+    "type": "n.",
+    "definition": "the action or process of adapting or being adapted",
+    "example": "The film is an adaptation of a popular novel.",
+    "exampleTranslation": "这部电影是根据一部流行小说改编的。"
+  },
+  {
+    "word": "addict",
+    "type": "n.",
+    "definition": "a person who is addicted to a particular substance or activity",
+    "example": "He is a drug addict.",
+    "exampleTranslation": "他是个吸毒者。"
+  },
+  {
+    "word": "addiction",
+    "type": "n.",
+    "definition": "the fact or condition of being addicted to a particular substance or activity",
+    "example": "His addiction to alcohol ruined his life.",
+    "exampleTranslation": "他对酒精的成瘾毁了他的生活。"
+  },
+  {
+    "word": "additive",
+    "type": "n.",
+    "definition": "a substance added to something in small quantities to improve or preserve it",
+    "example": "The food contains artificial additives.",
+    "exampleTranslation": "这种食物含有人工添加剂。"
+  },
+  {
+    "word": "address",
+    "type": "v.",
+    "definition": "think about and begin to deal with (a problem or task)",
+    "example": "We need to address the issue of climate change.",
+    "exampleTranslation": "我们需要解决气候变化问题。"
+  },
+  {
+    "word": "adept",
+    "type": "adj.",
+    "definition": "very skilled or proficient at something",
+    "example": "She is adept at playing the piano.",
+    "exampleTranslation": "她擅长弹钢琴。"
+  },
+  {
+    "word": "adequate",
+    "type": "adj.",
+    "definition": "satisfactory or acceptable in quality or quantity",
+    "example": "The food was adequate but not exceptional.",
+    "exampleTranslation": "食物足够但不出色。"
+  },
+  {
+    "word": "adhere",
+    "type": "v.",
+    "definition": "stick fast to (a surface or substance)",
+    "example": "The paint adheres well to the wall.",
+    "exampleTranslation": "这种油漆能很好地附着在墙上。"
+  },
+  {
+
+    "word": "aberrant",
+    "type": "adj.",
+    "definition": "departing from an accepted standard",
+    "example": "His aberrant behavior raised concerns among his friends.",
+    "exampleTranslation": "他的异常行为引起了朋友们的担忧。"
+  },
+  {
+    "word": "aberration",
+    "type": "n.",
+    "definition": "a departure from what is normal, usual, or expected, typically an unwelcome one",
+    "example": "His behavior was an aberration from his usual calm self.",
+    "exampleTranslation": "他的行为与平时的冷静大相径庭。"
+  },
+  {
+    "word": "accessory",
+    "type": "n.",
+    "definition": "a thing that can be added to something else in order to make it more useful, versatile, or attractive",
+    "example": "The smartphone comes with several accessories, including a charger and earphones.",
+    "exampleTranslation": "这款智能手机配备了几个配件，包括充电器和耳机。"
+  },
+  {
+    "word": "accidental",
+    "type": "adj.",
+    "definition": "happening by chance, not planned",
+    "example": "The meeting was accidental; we didn't plan to see each other.",
+    "exampleTranslation": "这次会面是偶然的；我们没打算见面。"
+  },
+  {
+    "word": "acclaim",
+    "type": "v.",
+    "definition": "praise enthusiastically and publicly",
+    "example": "The new film was acclaimed by critics.",
+    "exampleTranslation": "这部新电影受到评论家的热烈赞扬。"
+  },
+  {
+    "word": "accommodate",
+    "type": "v.",
+    "definition": "provide lodging or sufficient space for",
+    "example": "The hotel can accommodate up to 200 guests.",
+    "exampleTranslation": "这家酒店最多可容纳200位客人。"
+  },
+  {
+    "word": "accompaniment",
+    "type": "n.",
+    "definition": "a musical part that supports or partners a melody",
+    "example": "The pianist played a beautiful accompaniment to the singer's voice.",
+    "exampleTranslation": "钢琴家为歌手的声音演奏了优美的伴奏。"
+  },
+  {
+    "word": "accompany",
+    "type": "v.",
+    "definition": "go with (someone) as a companion or escort",
+    "example": "She accompanied her friend to the doctor's office.",
+    "exampleTranslation": "她陪朋友去了医生办公室。"
+  },
+  {
+    "word": "accomplish",
+    "type": "v.",
+    "definition": "achieve or complete successfully",
+    "example": "They worked hard to accomplish their goals.",
+    "exampleTranslation": "他们努力工作以实现自己的目标。"
+  },
+  {
+    "word": "accord",
+    "type": "n.",
+    "definition": "agreement or harmony",
+    "example": "The two countries reached an accord on trade.",
+    "exampleTranslation": "两国就贸易达成了协议。"
+  },
+  {
+    "word": "account",
+    "type": "n.",
+    "definition": "a report or description of an event or experience",
+    "example": "She gave a detailed account of the accident.",
+    "exampleTranslation": "她详细描述了事故的经过。"
+  },
+  {
+    "word": "accountant",
+    "type": "n.",
+    "definition": "a person whose job is to keep or inspect financial accounts",
+    "example": "We hired an accountant to help with our taxes.",
+    "exampleTranslation": "我们雇了一名会计来帮助处理税务。"
+  },
+  {
+    "word": "accumulate",
+    "type": "v.",
+    "definition": "gather together or acquire an increasing number or quantity of",
+    "example": "Dust tends to accumulate on unused furniture.",
+    "exampleTranslation": "灰尘容易在未使用的家具上堆积。"
+  },
+  {
+    "word": "accuracy",
+    "type": "n.",
+    "definition": "the quality or state of being correct or precise",
+    "example": "The accuracy of the measurement is crucial.",
+    "exampleTranslation": "测量的准确性至关重要。"
+  },
+  {
+    "word": "accurate",
+    "type": "adj.",
+    "definition": "(especially of information, measurements, or predictions) correct in all details; exact",
+    "example": "The weather forecast was surprisingly accurate.",
+    "exampleTranslation": "天气预报出奇地准确。"
+  },
+  {
+    "word": "accuse",
+    "type": "v.",
+    "definition": "charge (someone) with an offence or crime",
+    "example": "He was accused of stealing money from the company.",
+    "exampleTranslation": "他被指控从公司偷钱。"
+  },
+  {
+    "word": "accustom",
+    "type": "v.",
+    "definition": "make (someone) used to something",
+    "example": "It took her a while to accustom herself to the new job.",
+    "exampleTranslation": "她花了一段时间才适应新工作。"
+  },
+  {
+    "word": "ache",
+    "type": "n.",
+    "definition": "a continuous or prolonged dull pain in a part of one's body",
+    "example": "I have a dull ache in my lower back.",
+    "exampleTranslation": "我的下背部隐隐作痛。"
+  },
+  {
+    "word": "achieve",
+    "type": "v.",
+    "definition": "successfully bring about or reach (a desired objective or result) by effort, skill, or courage",
+    "example": "She worked hard to achieve her dream of becoming a doctor.",
+    "exampleTranslation": "她努力实现成为医生的梦想。"
+  },
+  {
+    "word": "achievement",
+    "type": "n.",
+    "definition": "a thing done successfully with effort, skill, or courage",
+    "example": "Winning the championship was a great achievement.",
+    "exampleTranslation": "赢得冠军是一项伟大的成就。"
+  },
+  {
+    "word": "acid",
+    "type": "adj.",
+    "definition": "having a pH of less than 7, tending to cause corrosion",
+    "example": "Lemon juice is acidic and can be used to clean copper.",
+    "exampleTranslation": "柠檬汁呈酸性，可用于清洁铜器。"
+  },
+  {
+    "word": "acknowledge",
+    "type": "v.",
+    "definition": "accept or admit the existence or truth of",
+    "example": "He acknowledged his mistake and apologized.",
+    "exampleTranslation": "他承认了错误并道歉。"
+  },
+  {
+
+    "word": "aberration",
+    "type": "noun",
+    "definition": "偏差；脱离常轨；心理失常",
+    "example": "His behavior was an aberration from his usual calm self.",
+    "exampleTranslation": "他的行为与平时的冷静大相径庭。"
+  },
+  {
+    "word": "abeyance",
+    "type": "n.",
+    "definition": "a state of temporary disuse or suspension",
+    "example": "The project is currently in abeyance.",
+    "exampleTranslation": "该项目目前处于暂停状态。"
+  },
+  {
+    "word": "abjure",
+    "type": "v.",
+    "definition": "solemnly renounce (a belief, cause, or claim)",
+    "example": "He abjured his former religious beliefs.",
+    "exampleTranslation": "他宣誓放弃了以前的宗教信仰。"
+  },
+  {
+    "word": "ablution",
+    "type": "n.",
+    "definition": "the act of washing oneself",
+    "example": "The priest performed his ablutions before Mass.",
+    "exampleTranslation": "牧师在弥撒前进行了净身仪式。"
+  },
+  {
+    "word": "abnegation",
+    "type": "n.",
+    "definition": "the action of renouncing or rejecting something",
+    "example": "The monk's life required great abnegation.",
+    "exampleTranslation": "僧侣的生活需要极大的克制。"
+  },
+  {
+    "word": "abominate",
+    "type": "v.",
+    "definition": "detest; loathe",
+    "example": "She abominated cruelty to animals.",
+    "exampleTranslation": "她痛恨虐待动物的行为。"
+  },
+  {
+    "word": "aboriginal",
+    "type": "adj.",
+    "definition": "inhabiting or existing in a land from the earliest times or from before the arrival of colonists; indigenous",
+    "example": "The aboriginal people of Australia have a rich cultural heritage.",
+    "exampleTranslation": "澳大利亚的原住民拥有丰富的文化遗产。"
+  },
+  {
+    "word": "abortive",
+    "type": "adj.",
+    "definition": "failing to produce the intended result",
+    "example": "Their attempt to climb the mountain was abortive due to bad weather.",
+    "exampleTranslation": "由于天气恶劣，他们攀登这座山的尝试失败了。"
+  },
+  {
+    "word": "abrade",
+    "type": "v.",
+    "definition": "scrape or wear away by friction or erosion",
+    "example": "The rough surface abraded his skin.",
+    "exampleTranslation": "粗糙的表面擦伤了他的皮肤。"
+  },
+  {
+    "word": "abrogate",
+    "type": "v.",
+    "definition": "repeal or annul (a law or agreement)",
+    "example": "The government decided to abrogate the treaty.",
+    "exampleTranslation": "政府决定废除该条约。"
+  },
+  {
+    "word": "abstemious",
+    "type": "adj.",
+    "definition": "marked by restraint, especially in the consumption of food or alcohol",
+    "example": "He led an abstemious life, rarely drinking alcohol.",
+    "exampleTranslation": "他过着节制的生活，很少饮酒。"
+  },
+  {
+    "word": "abstinence",
+    "type": "n.",
+    "definition": "the practice of restraining oneself from indulging in something, typically alcohol or sex",
+    "example": "He practiced abstinence from alcohol for health reasons.",
+    "exampleTranslation": "出于健康原因，他戒酒了。"
+  },
+  {
+    "word": "abstruse",
+    "type": "adj.",
+    "definition": "difficult to understand; obscure",
+    "example": "The philosopher's ideas were too abstruse for most people.",
+    "exampleTranslation": "这位哲学家的思想对大多数人来说太晦涩了。"
+  },
+  {
+    "word": "abundant",
+    "type": "adj.",
+    "definition": "existing or available in large quantities; plentiful",
+    "example": "The region is abundant in natural resources.",
+    "exampleTranslation": "该地区自然资源丰富。"
+  },
+  {
+    "word": "abuse",
+    "type": "v.",
+    "definition": "use (something) to bad effect or for a bad purpose; misuse",
+    "example": "He abused his power by taking bribes.",
+    "exampleTranslation": "他滥用权力收受贿赂。"
+  },
+  {
+    "word": "abysmal",
+    "type": "adj.",
+    "definition": "extremely bad; appalling",
+    "example": "The service at the restaurant was abysmal.",
+    "exampleTranslation": "这家餐馆的服务极差。"
+  },
+  {
+    "word": "academic",
+    "type": "adj.",
+    "definition": "relating to education and scholarship",
+    "example": "She has an academic background in psychology.",
+    "exampleTranslation": "她有心理学的学术背景。"
+  },
+  {
+    "word": "academy",
+    "type": "n.",
+    "definition": "a society or institution of distinguished scholars and artists or scientists that aims to promote and maintain standards in its particular field",
+    "example": "He was elected to the Academy of Sciences.",
+    "exampleTranslation": "他被选入科学院。"
+  },
+  {
+    "word": "accede",
+    "type": "v.",
+    "definition": "agree to a demand, request, or treaty",
+    "example": "The government acceded to the protesters' demands.",
+    "exampleTranslation": "政府同意了抗议者的要求。"
+  },
+  {
+    "word": "accelerate",
+    "type": "v.",
+    "definition": "increase in rate, amount, or extent",
+    "example": "The car accelerated quickly down the highway.",
+    "exampleTranslation": "汽车在高速公路上迅速加速。"
+  },
+  {
+    "word": "accessible",
+    "type": "adj.",
+    "definition": "(of a place) able to be reached or entered",
+    "example": "The museum is accessible to wheelchair users.",
+    "exampleTranslation": "该博物馆对轮椅使用者开放。"
+  },
+  {
+    "word": "abjure",
+    "type": "verb",
+    "definition": "发誓放弃；宣誓弃绝",
+    "example": "He abjured his former beliefs.",
+    "exampleTranslation": "他发誓放弃以前的信仰。"
+  },
+  {
+    "word": "ablution",
+    "type": "noun",
+    "definition": "沐浴；净身；（宗教的）洗礼",
+    "example": "The priest performed ablutions before the ceremony.",
+    "exampleTranslation": "牧师在仪式前进行了沐浴。"
+  },
+  {
+    "word": "abnegation",
+    "type": "noun",
+    "definition": "放弃；克制；自我牺牲",
+    "example": "Her abnegation of personal desires allowed her to achieve great things.",
+    "exampleTranslation": "她对个人欲望的克制使她取得了伟大的成就。"
+  },
+  {
+    "word": "abominate",
+    "type": "verb",
+    "definition": "痛恨；憎恶",
+    "example": "She abominates cruelty in any form.",
+    "exampleTranslation": "她憎恶任何形式的残忍行为。"
+  },
+  {
+    "word": "aboriginal",
+    "type": "adj.",
+    "definition": "土著的；原始的",
+    "example": "The aboriginal people have lived in this area for thousands of years.",
+    "exampleTranslation": "土著居民已经在这个地区生活了数千年。"
+  },
+  {
+    "word": "abortive",
+    "type": "adj.",
+    "definition": "失败的；流产的；发育不全的",
+    "example": "Their attempt to climb the mountain was abortive due to bad weather.",
+    "exampleTranslation": "由于天气恶劣，他们攀登这座山的尝试失败了。"
+  },
+  {
+    "word": "abrade",
+    "type": "verb",
+    "definition": "磨损；擦伤；折磨",
+    "example": "The rough surface abraded his skin.",
+    "exampleTranslation": "粗糙的表面擦伤了他的皮肤。"
+  },
+  {
+    "word": "abrogate",
+    "type": "verb",
+    "definition": "废除；取消；废止",
+    "example": "The government decided to abrogate the outdated law.",
+    "exampleTranslation": "政府决定废除这项过时的法律。"
+  },
+  {
+    "word": "abstemious",
+    "type": "adj.",
+    "definition": "节制的；节俭的；饮食有度的",
+    "example": "He leads an abstemious life, rarely drinking alcohol.",
+    "exampleTranslation": "他过着节制的生活，很少喝酒。"
+  },
+  {
+    "word": "abstinence",
+    "type": "noun",
+    "definition": "节制；禁欲；戒酒",
+    "example": "He practiced abstinence from alcohol for a month.",
+    "exampleTranslation": "他戒酒一个月。"
+  },
+  {
+    "word": "abstract",
+    "type": "adj.",
+    "definition": "抽象的；理论的；难解的",
+    "example": "Abstract art is often difficult to understand.",
+    "exampleTranslation": "抽象艺术往往难以理解。"
+  },
+  {
+    "word": "abstruse",
+    "type": "adj.",
+    "definition": "深奥的；难解的",
+    "example": "The professor's lecture was too abstruse for most students.",
+    "exampleTranslation": "教授的讲座对大多数学生来说太深奥了。"
+  },
+  {
+    "word": "abundant",
+    "type": "adj.",
+    "definition": "丰富的；充裕的；大量的",
+    "example": "The region is abundant in natural resources.",
+    "exampleTranslation": "该地区自然资源丰富。"
+  },
+  {
+    "word": "abuse",
+    "type": "noun/verb",
+    "definition": "滥用；虐待；辱骂",
+    "example": "The abuse of power by government officials is a serious problem.",
+    "exampleTranslation": "政府官员滥用权力是一个严重的问题。"
+  },
+  {
+    "word": "abysmal",
+    "type": "adj.",
+    "definition": "极坏的；深不可测的；糟透的",
+    "example": "The service at that restaurant was abysmal.",
+    "exampleTranslation": "那家餐馆的服务糟透了。"
+  },
+  {
+    "word": "abyss",
+    "type": "noun",
+    "definition": "深渊；深坑；困境",
+    "example": "He felt like he was falling into an abyss of despair.",
+    "exampleTranslation": "他觉得自己掉进了绝望的深渊。"
+  },
+  {
+    "word": "academic",
+    "type": "adj.",
+    "definition": "学术的；理论的；学院的",
+    "example": "She has published many academic papers on linguistics.",
+    "exampleTranslation": "她发表了许多关于语言学的学术论文。"
+  },
+  {
+    "word": "academy",
+    "type": "noun",
+    "definition": "学院；学会；研究院",
+    "example": "He was accepted into the academy of fine arts.",
+    "exampleTranslation": "他被美术学院录取了。"
+  },
+  {
+    "word": "accelerate",
+    "type": "verb",
+    "definition": "加速；促进；增加",
+    "example": "The car accelerated quickly when the light turned green.",
+    "exampleTranslation": "绿灯亮时，汽车迅速加速。"
+  },
+  {
+    "word": "accent",
+    "type": "noun/verb",
+    "definition": "口音；重音；强调",
+    "example": "She has a strong British accent.",
+    "exampleTranslation": "她有很重的英国口音。"
+  },
+  {
+    "word": "acceptance",
+    "type": "noun",
+    "definition": "接受；认可；容忍",
+    "example": "His acceptance of the job offer was immediate.",
+    "exampleTranslation": "他立即接受了这份工作邀请。"
+  },
+  {
+    "word": "access",
+    "type": "noun/verb",
+    "definition": "进入；使用权；访问",
+    "example": "Students have free access to the library.",
+    "exampleTranslation": "学生可以免费使用图书馆。"
+  },
+  {
+    "word": "accessory",
+    "type": "noun",
+    "definition": "附件；配饰；从犯",
+    "example": "She bought some accessories to go with her new dress.",
+    "exampleTranslation": "她买了一些配饰来搭配她的新裙子。"
+  },
+  {
+    "word": "accidental",
+    "type": "adj.",
+    "definition": "意外的；偶然的；非主要的",
+    "example": "The discovery was accidental.",
+    "exampleTranslation": "这个发现是偶然的。"
+  },
+  {
+    "word": "accommodate",
+    "type": "verb",
+    "definition": "容纳；提供住宿；适应",
+    "example": "The hotel can accommodate up to 200 guests.",
+    "exampleTranslation": "这家酒店最多可容纳200位客人。"
+  },
+  {
+    "word": "accommodation",
+    "type": "noun",
+    "definition": "住宿；膳宿；和解",
+    "example": "We need to find accommodation for the night.",
+    "exampleTranslation": "我们需要找地方过夜。"
+  },
+  {
+    "word": "accompany",
+    "type": "verb",
+    "definition": "陪伴；伴随；伴奏",
+    "example": "She asked me to accompany her to the concert.",
+    "exampleTranslation": "她请我陪她去听音乐会。"
+  },
+  {
+    "word": "accomplish",
+    "type": "verb",
+    "definition": "完成；实现；达到",
+    "example": "He worked hard to accomplish his goals.",
+    "exampleTranslation": "他努力工作以实现自己的目标。"
+  },
+  {
+    "word": "accord",
+    "type": "noun/verb",
+    "definition": "一致；协议；给予",
+    "example": "His actions were in accord with his beliefs.",
+    "exampleTranslation": "他的行为与他的信仰一致。"
+  },
+  {
+    "word": "accordance",
+    "type": "noun",
+    "definition": "一致；和谐；符合",
+    "example": "In accordance with your request, we have sent the documents.",
+    "exampleTranslation": "根据您的要求，我们已发送文件。"
+  },
+  {
+    "word": "accordingly",
+    "type": "adv.",
+    "definition": "因此；相应地；照着",
+    "example": "He was told to leave, and accordingly he went.",
+    "exampleTranslation": "他被告知离开，因此他走了。"
+  },
+  {
+    "word": "account",
+    "type": "noun/verb",
+    "definition": "账户；解释；认为",
+    "example": "I need to open a bank account.",
+    "exampleTranslation": "我需要开一个银行账户。"
+  },
+  {
+    "word": "accountant",
+    "type": "noun",
+    "definition": "会计；会计师",
+    "example": "We hired an accountant to do our taxes.",
+    "exampleTranslation": "我们雇了一名会计师来做我们的税务。"
+  },
+  {
+    "word": "accumulate",
+    "type": "verb",
+    "definition": "积累；积聚；堆积",
+    "example": "Dust accumulates quickly in this old house.",
+    "exampleTranslation": "灰尘在这座老房子里积得很快。"
+  },
+  {
+    "word": "accuracy",
+    "type": "noun",
+    "definition": "准确性；精确性；正确度",
+    "example": "The accuracy of the report is questionable.",
+    "exampleTranslation": "这份报告的准确性值得怀疑。"
+  },
+  {
+    "word": "accurate",
+    "type": "adj.",
+    "definition": "准确的；精确的；正确的",
+    "example": "Her description of the event was very accurate.",
+    "exampleTranslation": "她对事件的描述非常准确。"
+  },
+  {
+    "word": "accuse",
+    "type": "verb",
+    "definition": "指责；控告；归咎于",
+    "example": "He was accused of stealing money.",
+    "exampleTranslation": "他被指控偷钱。"
+  },
+  {
+    "word": "accustom",
+    "type": "verb",
+    "definition": "使习惯；使适应",
+    "example": "It took her a while to accustom herself to the new job.",
+    "exampleTranslation": "她花了一段时间才适应新工作。"
+  },
+  {
+    "word": "ache",
+    "type": "noun/verb",
+    "definition": "疼痛；渴望；隐痛",
+    "example": "I have a headache.",
+    "exampleTranslation": "我头痛。"
+  },
+  {
+    "word": "achieve",
+    "type": "verb",
+    "definition": "达到；完成；实现",
+    "example": "She worked hard to achieve her dreams.",
+    "exampleTranslation": "她努力工作以实现自己的梦想。"
+  },
+  {
+    "word": "achievement",
+    "type": "noun",
+    "definition": "成就；完成；达到",
+    "example": "Winning the award was a great achievement.",
+    "exampleTranslation": "获得这个奖项是一项伟大的成就。"
+  },
+  {
+    "word": "acid",
+    "type": "noun/adj.",
+    "definition": "酸；酸性的；刻薄的",
+    "example": "Lemon juice is acidic.",
+    "exampleTranslation": "柠檬汁是酸性的。"
+  },
+  {
+    "word": "acknowledge",
+    "type": "verb",
+    "definition": "承认；感谢；确认",
+    "example": "He acknowledged his mistake.",
+    "exampleTranslation": "他承认了自己的错误。"
+  },
+  {
+    "word": "acquaint",
+    "type": "verb",
+    "definition": "使认识；使了解；通知",
+    "example": "I need to acquaint myself with the new rules.",
+    "exampleTranslation": "我需要熟悉新规则。"
+  },
+  {
+    "word": "acquaintance",
+    "type": "noun",
+    "definition": "熟人；相识；了解",
+    "example": "She is only an acquaintance, not a close friend.",
+    "exampleTranslation": "她只是熟人，不是亲密的朋友。"
+  },
+  {
+    "word": "acquire",
+    "type": "verb",
+    "definition": "获得；取得；学到",
+    "example": "He acquired a lot of knowledge through reading.",
+    "exampleTranslation": "他通过阅读获得了很多知识。"
+  },
+  {
+    "word": "acquisition",
+    "type": "noun",
+    "definition": "获得；习得；收购",
+    "example": "The company's latest acquisition is a small tech firm.",
+    "exampleTranslation": "公司最新收购的是一家小型科技公司。"
+  },
+  {
+    "word": "acrobat",
+    "type": "noun",
+    "definition": "杂技演员；随机应变者",
+    "example": "The acrobat performed amazing stunts.",
+    "exampleTranslation": "杂技演员表演了惊人的特技。"
+  },
+  {
+    "word": "across",
+    "type": "prep./adv.",
+    "definition": "穿过；横过；在对面",
+    "example": "She walked across the street.",
+    "exampleTranslation": "她穿过街道。"
+  },
+  {
+    "word": "act",
+    "type": "noun/verb",
+    "definition": "行为；行动；表演",
+    "example": "Her act of kindness was appreciated.",
+    "exampleTranslation": "她的善举受到了赞赏。"
+  },
+  {
+    "word": "action",
+    "type": "noun",
+    "definition": "行动；活动；作用",
+    "example": "We need to take action immediately.",
+    "exampleTranslation": "我们需要立即采取行动。"
+  },
+  {
+    "word": "activate",
+    "type": "verb",
+    "definition": "激活；使活动；触发",
+    "example": "You need to activate your account before using it.",
+    "exampleTranslation": "您需要先激活账户才能使用。"
+  },
+  {
+    "word": "active",
+    "type": "adj.",
+    "definition": "活跃的；积极的；主动的",
+    "example": "She is an active member of the club.",
+    "exampleTranslation": "她是俱乐部的活跃成员。"
+  },
+  {
+    "word": "activity",
+    "type": "noun",
+    "definition": "活动；行动；活跃",
+    "example": "There are many activities for children at the park.",
+    "exampleTranslation": "公园里有很多适合孩子们的活动。"
+  },
+  {
+    "word": "actor",
+    "type": "noun",
+    "definition": "演员；行动者；参与者",
+    "example": "He is a famous actor.",
+    "exampleTranslation": "他是一位著名的演员。"
+  },
+  {
+    "word": "actress",
+    "type": "noun",
+    "definition": "女演员",
+    "example": "She is a talented actress.",
+    "exampleTranslation": "她是一位有才华的女演员。"
+  },
+  {
+    "word": "actual",
+    "type": "adj.",
+    "definition": "实际的；真实的；现行的",
+    "example": "The actual cost was higher than expected.",
+    "exampleTranslation": "实际成本高于预期。"
+  },
+  {
+    "word": "acute",
+    "type": "adj.",
+    "definition": "严重的；敏锐的；急性的",
+    "example": "He has an acute sense of hearing.",
+    "exampleTranslation": "他有敏锐的听觉。"
+  },
+  {
+    "word": "adapt",
+    "type": "verb",
+    "definition": "适应；改编；改写",
+    "example": "She quickly adapted to the new environment.",
+    "exampleTranslation": "她很快适应了新环境。"
+  },
+  {
+    "word": "adaptation",
+    "type": "noun",
+    "definition": "适应；改编；改写本",
+    "example": "The film is an adaptation of a novel.",
+    "exampleTranslation": "这部电影是一部小说的改编。"
+  },
+  {
+    "word": "add",
+    "type": "verb",
+    "definition": "添加；增加；补充",
+    "example": "Please add sugar to my coffee.",
+    "exampleTranslation": "请在我的咖啡里加糖。"
+  },
+  {
+    "word": "addition",
+    "type": "noun",
+    "definition": "添加；加法；附加物",
+    "example": "The addition of a new wing to the building was completed.",
+    "exampleTranslation": "大楼新翼的增建工程已完成。"
+  },
+  {
+    "word": "additional",
+    "type": "adj.",
+    "definition": "附加的；额外的；补充的",
+    "example": "We need additional help.",
+    "exampleTranslation": "我们需要额外的帮助。"
+  },
+  {
+    "word": "adequate",
+    "type": "adj.",
+    "definition": "足够的；适当的；胜任的",
+    "example": "The food was adequate for our needs.",
+    "exampleTranslation": "食物足够我们需要。"
+  },
+  {
+    "word": "adhere",
+    "type": "verb",
+    "definition": "坚持；粘附；遵守",
+    "example": "He adheres to his principles.",
+    "exampleTranslation": "他坚持自己的原则。"
+  },
+  {
+    "word": "adhesive",
+    "type": "adj./noun",
+    "definition": "粘性的；粘合剂",
+    "example": "The adhesive on the tape is very strong.",
+    "exampleTranslation": "胶带上的粘合剂很强。"
+  },
+  {
+    "word": "adjacent",
+    "type": "adj.",
+    "definition": "邻近的；毗连的；接近的",
+    "example": "Our house is adjacent to the park.",
+    "exampleTranslation": "我们的房子靠近公园。"
+  },
+  {
+    "word": "adjective",
+    "type": "noun",
+    "definition": "形容词",
+    "example": "'Beautiful' is an adjective.",
+    "exampleTranslation": "'美丽的'是一个形容词。"
+  },
+  {
+    "word": "adjoin",
+    "type": "verb",
+    "definition": "毗连；邻接；贴近",
+    "example": "The two houses adjoin each other.",
+    "exampleTranslation": "这两座房子彼此相邻。"
+  },
+  {
+    "word": "adjust",
+    "type": "verb",
+    "definition": "调整；校准；适应",
+    "example": "He adjusted the temperature in the room.",
+    "exampleTranslation": "他调整了房间的温度。"
+  },
+  {
+    "word": "adjustment",
+    "type": "noun",
+    "definition": "调整；校准；适应",
+    "example": "The adjustment to the new schedule was difficult.",
+    "exampleTranslation": "适应新时间表很困难。"
+  },
+  {
+    "word": "administer",
+    "type": "verb",
+    "definition": "管理；执行；给予",
+    "example": "She administers the company's finances.",
+    "exampleTranslation": "她管理公司的财务。"
+  },
+  {
+    "word": "administration",
+    "type": "noun",
+    "definition": "管理；行政；政府",
+    "example": "The administration of the school is in good hands.",
+    "exampleTranslation": "学校的管理工作由得力人员负责。"
+  },
+  {
+    "word": "administrative",
+    "type": "adj.",
+    "definition": "管理的；行政的；政府的",
+    "example": "She works in administrative support.",
+    "exampleTranslation": "她从事行政支持工作。"
+  },
+  {
+    "word": "admirable",
+    "type": "adj.",
+    "definition": "令人钦佩的；极好的；值得赞扬的",
+    "example": "Her courage is admirable.",
+    "exampleTranslation": "她的勇气令人钦佩。"
+  },
+  {
+    "word": "admire",
+    "type": "verb",
+    "definition": "钦佩；赞美；羡慕",
+    "example": "I admire her for her determination.",
+    "exampleTranslation": "我钦佩她的决心。"
+  },
+  {
+    "word": "admission",
+    "type": "noun",
+    "definition": "承认；入场；录取",
+    "example": "Admission to the museum is free.",
+    "exampleTranslation": "博物馆免费入场。"
+  },
+  {
+    "word": "admit",
+    "type": "verb",
+    "definition": "承认；允许进入；接纳",
+    "example": "He finally admitted his mistake.",
+    "exampleTranslation": "他终于承认了自己的错误。"
+  },
+  {
+    "word": "adolescence",
+    "type": "noun",
+    "definition": "青春期；青少年时期",
+    "example": "Adolescence is a time of change.",
+    "exampleTranslation": "青春期是一个变化的时期。"
+  },
+  {
+    "word": "adolescent",
+    "type": "noun/adj.",
+    "definition": "青少年；青春期的",
+    "example": "Adolescent behavior can be unpredictable.",
+    "exampleTranslation": "青少年的行为可能不可预测。"
+  },
+  {
+    "word": "adopt",
+    "type": "verb",
+    "definition": "收养；采用；采纳",
+    "example": "They decided to adopt a child.",
+    "exampleTranslation": "他们决定收养一个孩子。"
+  },
+  {
+    "word": "adoption",
+    "type": "noun",
+    "definition": "收养；采用；采纳",
+    "example": "The adoption of new technology has improved efficiency.",
+    "exampleTranslation": "新技术的采用提高了效率。"
+  },
+  {
+    "word": "adult",
+    "type": "noun/adj.",
+    "definition": "成年人；成年的",
+    "example": "He is now an adult and must take responsibility.",
+    "exampleTranslation": "他现在是成年人，必须承担责任。"
+  },
+  {
+    "word": "advance",
+    "type": "noun/verb/adj.",
+    "definition": "前进；进展；预先的",
+    "example": "The army made a significant advance.",
+    "exampleTranslation": "军队取得了重大进展。"
+  },
+  {
+    "word": "advanced",
+    "type": "adj.",
+    "definition": "先进的；高级的；晚期的",
+    "example": "She is taking an advanced English course.",
+    "exampleTranslation": "她正在上高级英语课程。"
+  },
+  {
+    "word": "advantage",
+    "type": "noun",
+    "definition": "优势；有利条件；利益",
+    "example": "Being tall is an advantage in basketball.",
+    "exampleTranslation": "个子高在篮球运动中是一个优势。"
+  },
+  {
+    "word": "adventure",
+    "type": "noun/verb",
+    "definition": "冒险；奇遇；冒险经历",
+    "example": "They went on an adventure in the jungle.",
+    "exampleTranslation": "他们在丛林中进行了一次冒险。"
+  },
+  {
+    "word": "adverb",
+    "type": "noun",
+    "definition": "副词",
+    "example": "'Quickly' is an adverb.",
+    "exampleTranslation": "'快速地'是一个副词。"
+  },
+  {
+    "word": "adverse",
+    "type": "adj.",
+    "definition": "不利的；有害的；相反的",
+    "example": "The project was delayed due to adverse weather conditions.",
+    "exampleTranslation": "由于不利的天气条件，项目被推迟了。"
+  },
+  {
+    "word": "advertise",
+    "type": "verb",
+    "definition": "做广告；宣传；通知",
+    "example": "They advertised the job in the newspaper.",
+    "exampleTranslation": "他们在报纸上刊登了招聘广告。"
+  },
+  {
+    "word": "advertisement",
+    "type": "noun",
+    "definition": "广告；宣传；公告",
+    "example": "I saw an advertisement for a new car.",
+    "exampleTranslation": "我看到了一则新车广告。"
+  },
+  {
+    "word": "advice",
+    "type": "noun",
+    "definition": "建议；忠告；劝告",
+    "example": "She gave me some good advice.",
+    "exampleTranslation": "她给了我一些好建议。"
+  },
+  {
+    "word": "advisable",
+    "type": "adj.",
+    "definition": "明智的；可取的；适当的",
+    "example": "It is advisable to wear a helmet when cycling.",
+    "exampleTranslation": "骑自行车时戴头盔是明智的。"
+  },
+  {
+    "word": "advise",
+    "type": "verb",
+    "definition": "建议；忠告；劝告",
+    "example": "I advise you to see a doctor.",
+    "exampleTranslation": "我建议你去看医生。"
+  },
+  {
+    "word": "advisory",
+    "type": "adj.",
+    "definition": "顾问的；咨询的；劝告的",
+    "example": "He serves on an advisory committee.",
+    "exampleTranslation": "他在一个咨询委员会任职。"
+  },
+  {
+    "word": "advocate",
+    "type": "noun/verb",
+    "definition": "倡导者；支持；提倡",
+    "example": "She is an advocate for animal rights.",
+    "exampleTranslation": "她是动物权利的倡导者。"
+  },
+  {
+    "word": "aeroplane",
+    "type": "noun",
+    "definition": "飞机",
+    "example": "We traveled by aeroplane.",
+    "exampleTranslation": "我们乘飞机旅行。"
+  },
+  {
+    "word": "aesthetic",
+    "type": "adj.",
+    "definition": "美学的；审美的；雅致的",
+    "example": "The building has great aesthetic value.",
+    "exampleTranslation": "这座建筑具有很高的美学价值。"
+  },
+  {
+    "word": "affair",
+    "type": "noun",
+    "definition": "事件；事务；恋爱关系",
+    "example": "The company's financial affairs are complicated.",
+    "exampleTranslation": "公司的财务事务很复杂。"
+  },
+  {
+    "word": "affect",
+    "type": "verb",
+    "definition": "影响；感动；假装",
+    "example": "The weather affected our plans.",
+    "exampleTranslation": "天气影响了我们的计划。"
+  },
+  {
+    "word": "affection",
+    "type": "noun",
+    "definition": "喜爱；感情；影响",
+    "example": "She has a lot of affection for her family.",
+    "exampleTranslation": "她非常爱她的家人。"
+  },
+  {
+    "word": "affiliate",
+    "type": "noun/verb",
+    "definition": "附属机构；关联；加入",
+    "example": "The company is an affiliate of a large corporation.",
+    "exampleTranslation": "该公司是一家大公司的附属机构。"
+  },
+  {
+    "word": "affirm",
+    "type": "verb",
+    "definition": "断言；肯定；证实",
+    "example": "He affirmed his commitment to the project.",
+    "exampleTranslation": "他肯定了他对项目的承诺。"
+  },
+  {
+    "word": "affirmative",
+    "type": "adj./noun",
+    "definition": "肯定的；赞成的；肯定词",
+    "example": "He gave an affirmative answer.",
+    "exampleTranslation": "他给出了肯定的回答。"
+  },
+  {
+    "word": "afflict",
+    "type": "verb",
+    "definition": "折磨；使痛苦；使苦恼",
+    "example": "The disease afflicts millions of people worldwide.",
+    "exampleTranslation": "这种疾病折磨着全世界数百万人。"
+  },
+  {
+    "word": "affliction",
+    "type": "noun",
+    "definition": "苦难；折磨；苦恼",
+    "example": "Poverty is a great affliction.",
+    "exampleTranslation": "贫穷是一种巨大的苦难。"
+  },
+  {
+    "word": "afford",
+    "type": "verb",
+    "definition": "买得起；担负得起；提供",
+    "example": "I can't afford a new car.",
+    "exampleTranslation": "我买不起新车。"
+  },
+  {
+    "word": "afraid",
+    "type": "adj.",
+    "definition": "害怕的；恐怕的；担心的",
+    "example": "I'm afraid of spiders.",
+    "exampleTranslation": "我害怕蜘蛛。"
+  },
+  {
+    "word": "Africa",
+    "type": "noun",
+    "definition": "非洲",
+    "example": "He traveled to Africa last year.",
+    "exampleTranslation": "他去年去了非洲。"
+  },
+  {
+    "word": "African",
+    "type": "adj./noun",
+    "definition": "非洲的；非洲人",
+    "example": "She is of African descent.",
+    "exampleTranslation": "她有非洲血统。"
+  },
+  {
+    "word": "after",
+    "type": "prep./adv./conj.",
+    "definition": "在...之后；后来；在...以后",
+    "example": "We went home after the party.",
+    "exampleTranslation": "聚会结束后我们回家了。"
+  },
+  {
+    "word": "afternoon",
+    "type": "noun",
+    "definition": "下午；午后",
+    "example": "We'll meet in the afternoon.",
+    "exampleTranslation": "我们下午见面。"
+  },
+  {
+    "word": "afterward(s)",
+    "type": "adv.",
+    "definition": "后来；以后；随后",
+    "example": "We went to a restaurant afterward.",
+    "exampleTranslation": "后来我们去了一家餐馆。"
+  },
+  {
+    "word": "again",
+    "type": "adv.",
+    "definition": "再；又；此外",
+    "example": "Please say that again.",
+    "exampleTranslation": "请再说一遍。"
+  },
+  {
+    "word": "against",
+    "type": "prep.",
+    "definition": "反对；违反；靠",
+    "example": "He is against the proposal.",
+    "exampleTranslation": "他反对这个提议。"
+  },
+  {
+    "word": "age",
+    "type": "noun/verb",
+    "definition": "年龄；时代；变老",
+    "example": "What is your age?",
+    "exampleTranslation": "你多大了？"
+  },
+  {
+    "word": "agency",
+    "type": "noun",
+    "definition": "代理；机构；媒介",
+    "example": "She works for a travel agency.",
+    "exampleTranslation": "她在一家旅行社工作。"
+  },
+  {
+    "word": "agenda",
+    "type": "noun",
+    "definition": "议程；日程；目的",
+    "example": "What's on the agenda for today's meeting?",
+    "exampleTranslation": "今天会议的议程是什么？"
+  },
+  {
+    "word": "agent",
+    "type": "noun",
+    "definition": "代理人；经纪人；特工",
+    "example": "He is a real estate agent.",
+    "exampleTranslation": "他是一名房地产经纪人。"
+  },
+  {
+    "word": "aggregate",
+    "type": "noun/adj./verb",
+    "definition": "合计；总数；聚集",
+    "example": "The aggregate of all scores is 100.",
+    "exampleTranslation": "所有分数的总和是100。"
+  },
+  {
+    "word": "aggressive",
+    "type": "adj.",
+    "definition": "侵略性的；好斗的；有进取心的",
+    "example": "He has an aggressive personality.",
+    "exampleTranslation": "他性格好斗。"
+  },
+  {
+    "word": "ago",
+    "type": "adv.",
+    "definition": "以前；以往",
+    "example": "I saw him three days ago.",
+    "exampleTranslation": "我三天前见过他。"
+  },
+  {
+    "word": "agree",
+    "type": "verb",
+    "definition": "同意；赞成；约定",
+    "example": "I agree with you.",
+    "exampleTranslation": "我同意你的看法。"
+  },
+  {
+    "word": "agreement",
+    "type": "noun",
+    "definition": "协议；同意；一致",
+    "example": "We reached an agreement.",
+    "exampleTranslation": "我们达成了协议。"
+  },
+  {
+    "word": "agricultural",
+    "type": "adj.",
+    "definition": "农业的；农艺的；农学的",
+    "example": "Agricultural production has increased.",
+    "exampleTranslation": "农业生产增加了。"
+  },
+  {
+    "word": "agriculture",
+    "type": "noun",
+    "definition": "农业；农学；农艺",
+    "example": "Agriculture is important for the economy.",
+    "exampleTranslation": "农业对经济很重要。"
+  },
+  {
+    "word": "ahead",
+    "type": "adv.",
+    "definition": "向前；在前面；预先",
+    "example": "We need to plan ahead.",
+    "exampleTranslation": "我们需要提前计划。"
+  },
+  {
+    "word": "aid",
+    "type": "noun/verb",
+    "definition": "援助；帮助；救助",
+    "example": "The government provided aid to the victims.",
+    "exampleTranslation": "政府向受害者提供了援助。"
+  },
+  {
+    "word": "AIDS",
+    "type": "noun",
+    "definition": "艾滋病",
+    "example": "AIDS is a serious disease.",
+    "exampleTranslation": "艾滋病是一种严重的疾病。"
+  },
+  {
+    "word": "aim",
+    "type": "noun/verb",
+    "definition": "目标；目的；瞄准",
+    "example": "What is your aim in life?",
+    "exampleTranslation": "你的人生目标是什么？"
+  },
+  {
+    "word": "air",
+    "type": "noun/verb",
+    "definition": "空气；天空；通风",
+    "example": "The air is fresh in the mountains.",
+    "exampleTranslation": "山里的空气很新鲜。"
+  },
+  {
+    "word": "aircraft",
+    "type": "noun",
+    "definition": "飞机；航空器",
+    "example": "The aircraft took off on time.",
+    "exampleTranslation": "飞机准时起飞。"
+  },
+  {
+    "word": "airline",
+    "type": "noun",
+    "definition": "航空公司；航线",
+    "example": "We booked our tickets with a major airline.",
+    "exampleTranslation": "我们用一家主要航空公司预订了机票。"
+  },
+  {
+    "word": "airport",
+    "type": "noun",
+    "definition": "机场；航空站",
+    "example": "We arrived at the airport early.",
+    "exampleTranslation": "我们很早就到了机场。"
+  },
+  {
+    "word": "aisle",
+    "type": "noun",
+    "definition": "通道；走廊；过道",
+    "example": "Please keep the aisle clear.",
+    "exampleTranslation": "请保持过道畅通。"
+  },
+  {
+    "word": "alarm",
+    "type": "noun/verb",
+    "definition": "警报；惊恐；警告",
+    "example": "The fire alarm went off.",
+    "exampleTranslation": "火警响了。"
+  },
+  {
+    "word": "album",
+    "type": "noun",
+    "definition": "相册；集邮册；唱片",
+    "example": "She gave me a photo album.",
+    "exampleTranslation": "她给了我一本相册。"
+  },
+  {
+    "word": "alcohol",
+    "type": "noun",
+    "definition": "酒精；乙醇；酒类",
+    "example": "He doesn't drink alcohol.",
+    "exampleTranslation": "他不喝酒。"
+  },
+  {
+    "word": "alert",
+    "type": "adj./noun/verb",
+    "definition": "警惕的；警报；提醒",
+    "example": "Be alert for danger.",
+    "exampleTranslation": "警惕危险。"
+  },
+  {
+    "word": "alien",
+    "type": "adj./noun",
+    "definition": "外国的；外星人；陌生的",
+    "example": "The concept is alien to me.",
+    "exampleTranslation": "这个概念对我来说很陌生。"
+  },
+  {
+    "word": "alike",
+    "type": "adj./adv.",
+    "definition": "相似的；同样地；两者都",
+    "example": "The two sisters look very alike.",
+    "exampleTranslation": "这两个姐妹长得很像。"
+  },
+  {
+    "word": "alive",
+    "type": "adj.",
+    "definition": "活着的；有活力的；活跃的",
+    "example": "She is still alive.",
+    "exampleTranslation": "她还活着。"
+  },
+  {
+    "word": "all",
+    "type": "adj./pron./adv.",
+    "definition": "所有的；全部；完全",
+    "example": "All students must attend.",
+    "exampleTranslation": "所有学生必须参加。"
+  },
+  {
+    "word": "alliance",
+    "type": "noun",
+    "definition": "联盟；联合；联姻",
+    "example": "The two countries formed an alliance.",
+    "exampleTranslation": "这两个国家结成了联盟。"
+  },
+  {
+    "word": "allocate",
+    "type": "verb",
+    "definition": "分配；拨出；指派",
+    "example": "The government allocated funds for education.",
+    "exampleTranslation": "政府为教育拨出了资金。"
+  },
+  {
+    "word": "allow",
+    "type": "verb",
+    "definition": "允许；许可；给予",
+    "example": "My parents allow me to stay out late.",
+    "exampleTranslation": "我父母允许我晚归。"
+  },
+  {
+    "word": "allowance",
+    "type": "noun",
+    "definition": "津贴；零用钱；允许",
+    "example": "I get a monthly allowance from my parents.",
+    "exampleTranslation": "我每月从父母那里得到零用钱。"
+  },
+  {
+    "word": "alloy",
+    "type": "noun/verb",
+    "definition": "合金；铸成合金；损害",
+    "example": "Steel is an alloy of iron and carbon.",
+    "exampleTranslation": "钢是铁和碳的合金。"
+  },
+  {
+    "word": "ally",
+    "type": "noun/verb",
+    "definition": "盟友；同盟国；联合",
+    "example": "The United States is an ally of many countries.",
+    "exampleTranslation": "美国是许多国家的盟友。"
+  },
+  {
+    "word": "almost",
+    "type": "adv.",
+    "definition": "几乎；差不多；将近",
+    "example": "I almost missed the bus.",
+    "exampleTranslation": "我差点错过公共汽车。"
+  },
+  {
+    "word": "alone",
+    "type": "adj./adv.",
+    "definition": "独自的；单独地；仅仅",
+    "example": "I like to be alone sometimes.",
+    "exampleTranslation": "我有时喜欢独处。"
+  },
+  {
+    "word": "along",
+    "type": "prep./adv.",
+    "definition": "沿着；顺着；一起",
+    "example": "We walked along the beach.",
+    "exampleTranslation": "我们沿着海滩散步。"
+  },
+  {
+    "word": "alongside",
+    "type": "prep./adv.",
+    "definition": "在...旁边；与...一起；并肩地",
+    "example": "The boat was moored alongside the dock.",
+    "exampleTranslation": "船停泊在码头旁边。"
+  },
+  {
+    "word": "aloud",
+    "type": "adv.",
+    "definition": "大声地；出声地；公开地",
+    "example": "Please read the poem aloud.",
+    "exampleTranslation": "请大声朗读这首诗。"
+  },
+  {
+    "word": "alphabet",
+    "type": "noun",
+    "definition": "字母表；字母系统",
+    "example": "The English alphabet has 26 letters.",
+    "exampleTranslation": "英语字母表有26个字母。"
+  },
+  {
+    "word": "already",
+    "type": "adv.",
+    "definition": "已经；早已；先前",
+    "example": "I've already finished my homework.",
+    "exampleTranslation": "我已经完成了作业。"
+  },
+  {
+    "word": "also",
+    "type": "adv.",
+    "definition": "也；同样；而且",
+    "example": "I also like to play tennis.",
+    "exampleTranslation": "我也喜欢打网球。"
+  },
+  {
+    "word": "alter",
+    "type": "verb",
+    "definition": "改变；修改；变更",
+    "example": "She decided to alter her hairstyle.",
+    "exampleTranslation": "她决定改变发型。"
+  },
+  {
+    "word": "alternate",
+    "type": "adj./verb/noun",
+    "definition": "交替的；轮流；代替者",
+    "example": "We take alternate days off.",
+    "exampleTranslation": "我们轮流休息。"
+  },
+  {
+    "word": "alternative",
+    "type": "adj./noun",
+    "definition": "替代的；可供选择的事物；另类",
+    "example": "Do you have any alternative suggestions?",
+    "exampleTranslation": "你有其他建议吗？"
+  },
+  {
+    "word": "although",
+    "type": "conj.",
+    "definition": "虽然；尽管；但是",
+    "example": "Although it rained, we still went out.",
+    "exampleTranslation": "虽然下雨了，我们还是出去了。"
+  },
+  {
+    "word": "altitude",
+    "type": "noun",
+    "definition": "高度；海拔；高地",
+    "example": "The plane flew at an altitude of 10,000 meters.",
+    "exampleTranslation": "飞机在10,000米的高度飞行。"
+  },
+  {
+    "word": "altogether",
+    "type": "adv.",
+    "definition": "完全；总共；总之",
+    "example": "Altogether, it was a great experience.",
+    "exampleTranslation": "总之，这是一次很棒的经历。"
+  },
+  {
+    "word": "aluminium",
+    "type": "noun",
+    "definition": "铝",
+    "example": "The can is made of aluminium.",
+    "exampleTranslation": "这个罐子是铝制的。"
+  },
+  {
+    "word": "always",
+    "type": "adv.",
+    "definition": "总是；一直；永远",
+    "example": "He always arrives late.",
+    "exampleTranslation": "他总是迟到。"
+  },
+  {
+    "word": "amateur",
+    "type": "adj./noun",
+    "definition": "业余的；业余爱好者；外行",
+    "example": "He is an amateur photographer.",
+    "exampleTranslation": "他是一名业余摄影师。"
+  },
+  {
+    "word": "amaze",
+    "type": "verb",
+    "definition": "使吃惊；使惊讶；使惊愕",
+    "example": "Her performance amazed everyone.",
+    "exampleTranslation": "她的表演让每个人都很惊讶。"
+  },
+  {
+    "word": "amazing",
+    "type": "adj.",
+    "definition": "令人惊讶的；令人吃惊的；惊人的",
+    "example": "It's amazing what you can do when you try.",
+    "exampleTranslation": "当你尝试时，你能做的事情令人惊讶。"
+  },
+  {
+    "word": "ambassador",
+    "type": "noun",
+    "definition": "大使；使节；代表",
+    "example": "He is the ambassador to France.",
+    "exampleTranslation": "他是驻法国大使。"
+  },
+  {
+    "word": "ambient",
+    "type": "adj.",
+    "definition": "周围的；环境的；环绕的",
+    "example": "The ambient temperature is 25 degrees Celsius.",
+    "exampleTranslation": "环境温度为25摄氏度。"
+  },
+  {
+    "word": "ambiguity",
+    "type": "noun",
+    "definition": "歧义；模棱两可；含糊不清",
+    "example": "The ambiguity of the statement caused confusion.",
+    "exampleTranslation": "声明的歧义引起了混乱。"
+  },
+  {
+    "word": "ambiguous",
+    "type": "adj.",
+    "definition": "模棱两可的；歧义的；不明确的",
+    "example": "His instructions were ambiguous.",
+    "exampleTranslation": "他的指示不明确。"
+  },
+  {
+    "word": "ambition",
+    "type": "noun",
+    "definition": "野心；抱负；志向",
+    "example": "She has great ambition.",
+    "exampleTranslation": "她有很大的抱负。"
+  },
+  {
+    "word": "ambitious",
+    "type": "adj.",
+    "definition": "有野心的；有抱负的；雄心勃勃的",
+    "example": "He is an ambitious young man.",
+    "exampleTranslation": "他是一个有抱负的年轻人。"
+  },
+  {
+    "word": "ambulance",
+    "type": "noun",
+    "definition": "救护车",
+    "example": "The ambulance arrived quickly.",
+    "exampleTranslation": "救护车很快就到了。"
+  },
+  {
+    "word": "amend",
+    "type": "verb",
+    "definition": "修正；修改；改进",
+    "example": "They decided to amend the law.",
+    "exampleTranslation": "他们决定修改法律。"
+  },
+  {
+    "word": "amendment",
+    "type": "noun",
+    "definition": "修正；修正案；改进",
+    "example": "The constitution has several amendments.",
+    "exampleTranslation": "宪法有几项修正案。"
+  },
+  {
+    "word": "America",
+    "type": "noun",
+    "definition": "美洲；美国",
+    "example": "He is from America.",
+    "exampleTranslation": "他来自美国。"
+  },
+  {
+    "word": "American",
+    "type": "adj./noun",
+    "definition": "美国的；美国人；美洲的",
+    "example": "She is an American citizen.",
+    "exampleTranslation": "她是美国公民。"
+  },
+  {
+    "word": "amiable",
+    "type": "adj.",
+    "definition": "和蔼可亲的；友好的；亲切的",
+    "example": "She has an amiable personality.",
+    "exampleTranslation": "她性格和蔼可亲。"
+  },
+  {
+    "word": "amicable",
+    "type": "adj.",
+    "definition": "友好的；和睦的；友善的",
+    "example": "They reached an amicable agreement.",
+    "exampleTranslation": "他们达成了友好协议。"
+  },
+  {
+    "word": "amid",
+    "type": "prep.",
+    "definition": "在...中间；在...之中；被...围绕",
+    "example": "Amid the chaos, she remained calm.",
+    "exampleTranslation": "在混乱中，她保持冷静。"
+  },
+  {
+    "word": "among",
+    "type": "prep.",
+    "definition": "在...之中；在...中间；与...在一起",
+    "example": "She is among the best students in the class.",
+    "exampleTranslation": "她是班上最好的学生之一。"
+  },
+  {
+    "word": "amount",
+    "type": "noun/verb",
+    "definition": "数量；总额；总计",
+    "example": "The amount of money is not important.",
+    "exampleTranslation": "钱的数量并不重要。"
+  },
+  {
+    "word": "ampere",
+    "type": "noun",
+    "definition": "安培（电流单位）",
+    "example": "The current is measured in amperes.",
+    "exampleTranslation": "电流以安培为单位测量。"
+  },
+  {
+    "word": "ample",
+    "type": "adj.",
+    "definition": "足够的；充足的；丰富的",
+    "example": "We have ample time to finish the project.",
+    "exampleTranslation": "我们有足够的时间完成这个项目。"
+  },
+  {
+    "word": "amplify",
+    "type": "verb",
+    "definition": "放大；增强；详述",
+    "example": "The microphone amplifies the sound.",
+    "exampleTranslation": "麦克风放大声音。"
+  },
+  {
+    "word": "amplitude",
+    "type": "noun",
+    "definition": "振幅；广大；充足",
+    "example": "The amplitude of the wave is large.",
+    "exampleTranslation": "波的振幅很大。"
+  },
+  {
+    "word": "amuse",
+    "type": "verb",
+    "definition": "逗乐；使发笑；使消遣",
+    "example": "His jokes amused us.",
+    "exampleTranslation": "他的笑话逗乐了我们。"
+  },
+  {
+    "word": "amusement",
+    "type": "noun",
+    "definition": "娱乐；消遣；乐趣",
+    "example": "We went to an amusement park.",
+    "exampleTranslation": "我们去了一个游乐园。"
+  },
+  {
+    "word": "analogy",
+    "type": "noun",
+    "definition": "类比；类推；比拟",
+    "example": "He made an analogy between the brain and a computer.",
+    "exampleTranslation": "他把大脑和计算机作了类比。"
+  },
+  {
+    "word": "analysis",
+    "type": "noun",
+    "definition": "分析；分解；研究",
+    "example": "The analysis of the data took several weeks.",
+    "exampleTranslation": "数据分析花了几个星期。"
+  },
+  {
+    "word": "analyst",
+    "type": "noun",
+    "definition": "分析师；分析家；分解者",
+    "example": "She is a financial analyst.",
+    "exampleTranslation": "她是一名金融分析师。"
+  },
+  {
+    "word": "analyze",
+    "type": "verb",
+    "definition": "分析；研究；分解",
+    "example": "We need to analyze the problem.",
+    "exampleTranslation": "我们需要分析这个问题。"
+  },
+  {
+    "word": "analytical",
+    "type": "adj.",
+    "definition": "分析的；解析的；善于分析的",
+    "example": "He has strong analytical skills.",
+    "exampleTranslation": "他有很强的分析能力。"
+  },
+  {
+    "word": "ancestor",
+    "type": "noun",
+    "definition": "祖先；祖宗；原型",
+    "example": "We are descendants of our ancestors.",
+    "exampleTranslation": "我们是祖先的后代。"
+  },
+  {
+    "word": "anchor",
+    "type": "noun/verb",
+    "definition": "锚；抛锚；固定",
+    "example": "The ship dropped anchor.",
+    "exampleTranslation": "船抛锚了。"
+  },
+  {
+    "word": "ancient",
+    "type": "adj.",
+    "definition": "古代的；古老的；年老的",
+    "example": "The ancient city has many historical sites.",
+    "exampleTranslation": "这座古城有许多历史遗迹。"
+  },
+  {
+    "word": "and",
+    "type": "conj.",
+    "definition": "和；与；而且",
+    "example": "I like apples and oranges.",
+    "exampleTranslation": "我喜欢苹果和橘子。"
+  },
+  {
+    "word": "anecdote",
+    "type": "noun",
+    "definition": "轶事；趣闻；奇闻",
+    "example": "He told an interesting anecdote.",
+    "exampleTranslation": "他讲了一个有趣的轶事。"
+  },
+  {
+    "word": "angel",
+    "type": "noun",
+    "definition": "天使；安琪儿；善人",
+    "example": "She is like an angel.",
+    "exampleTranslation": "她就像天使一样。"
+  },
+  {
+    "word": "anger",
+    "type": "noun/verb",
+    "definition": "愤怒；怒气；使发怒",
+    "example": "His words filled her with anger.",
+    "exampleTranslation": "他的话使她充满愤怒。"
+  },
+  {
+    "word": "angle",
+    "type": "noun/verb",
+    "definition": "角度；角；钓鱼",
+    "example": "The angle of the roof is steep.",
+    "exampleTranslation": "屋顶的角度很陡。"
+  },
+  {
+    "word": "angry",
+    "type": "adj.",
+    "definition": "生气的；愤怒的；狂暴的",
+    "example": "He was angry with me.",
+    "exampleTranslation": "他生我的气。"
+  },
+  {
+    "word": "animal",
+    "type": "noun/adj.",
+    "definition": "动物；野兽；动物的",
+    "example": "I love all animals.",
+    "exampleTranslation": "我喜欢所有的动物。"
+  },
+  {
+    "word": "ankle",
+    "type": "noun",
+    "definition": "踝关节；踝",
+    "example": "She sprained her ankle.",
+    "exampleTranslation": "她扭伤了脚踝。"
+  },
+  {
+    "word": "anniversary",
+    "type": "noun",
+    "definition": "周年纪念日；周年",
+    "example": "Today is our wedding anniversary.",
+    "exampleTranslation": "今天是我们的结婚周年纪念日。"
+  },
+  {
+    "word": "announce",
+    "type": "verb",
+    "definition": "宣布；宣告；通知",
+    "example": "The president will announce his decision tomorrow.",
+    "exampleTranslation": "总统明天将宣布他的决定。"
+  },
+  {
+    "word": "announcement",
+    "type": "noun",
+    "definition": "宣布；宣告；通知",
+    "example": "There was an announcement about the delay.",
+    "exampleTranslation": "有一个关于延迟的通知。"
+  },
+  {
+    "word": "annoy",
+    "type": "verb",
+    "definition": "使恼怒；使烦恼；打搅",
+    "example": "His constant talking annoys me.",
+    "exampleTranslation": "他不停地说话让我很烦。"
+  },
+  {
+    "word": "annual",
+    "type": "adj./noun",
+    "definition": "每年的；年度的；年刊",
+    "example": "We have an annual meeting.",
+    "exampleTranslation": "我们每年开一次会。"
+  },
+  {
+    "word": "anonymous",
+    "type": "adj.",
+    "definition": "匿名的；无名的；无特色的",
+    "example": "The letter was anonymous.",
+    "exampleTranslation": "这封信是匿名的。"
+  },
+  {
+    "word": "another",
+    "type": "adj./pron.",
+    "definition": "另一个；再一个；不同的",
+    "example": "I need another cup of coffee.",
+    "exampleTranslation": "我需要另一杯咖啡。"
+  },
+  {
+    "word": "appear",
+    "type": "verb",
+    "definition": "出现；显得；似乎",
+    "example": "He appeared suddenly.",
+    "exampleTranslation": "他突然出现了。"
+  },
+  {
+    "word": "appearance",
+    "type": "noun",
+    "definition": "出现；外貌；外观",
+    "example": "She has a neat appearance.",
+    "exampleTranslation": "她外表整洁。"
+  },
+  {
+    "word": "apple",
+    "type": "noun",
+    "definition": "苹果；苹果树",
+    "example": "I like to eat apples.",
+    "exampleTranslation": "我喜欢吃苹果。"
+  },
+  {
+    "word": "application",
+    "type": "noun",
+    "definition": "应用；申请；应用程序",
+    "example": "I submitted my application.",
+    "exampleTranslation": "我提交了我的申请。"
+  },
+  {
+    "word": "apply",
+    "type": "verb",
+    "definition": "申请；应用；适用",
+    "example": "I need to apply for a visa.",
+    "exampleTranslation": "我需要申请签证。"
+  },
+  {
+    "word": "appoint",
+    "type": "verb",
+    "definition": "任命；指定；约定",
+    "example": "He was appointed manager.",
+    "exampleTranslation": "他被任命为经理。"
+  },
+  {
+    "word": "appointment",
+    "type": "noun",
+    "definition": "任命；约会；约定",
+    "example": "I have a doctor's appointment.",
+    "exampleTranslation": "我和医生有约。"
+  },
+  {
+    "word": "appreciate",
+    "type": "verb",
+    "definition": "欣赏；感激；理解",
+    "example": "I appreciate your help.",
+    "exampleTranslation": "我感谢你的帮助。"
+  },
+  {
+    "word": "approach",
+    "type": "verb/noun",
+    "definition": "接近；方法；途径",
+    "example": "We need a new approach.",
+    "exampleTranslation": "我们需要一种新方法。"
+  },
+  {
+    "word": "approval",
+    "type": "noun",
+    "definition": "批准；认可；赞成",
+    "example": "The plan needs approval.",
+    "exampleTranslation": "这个计划需要批准。"
+  },
+  {
+    "word": "approve",
+    "type": "verb",
+    "definition": "批准；赞成；认可",
+    "example": "They approved the plan.",
+    "exampleTranslation": "他们批准了这个计划。"
+  },
+  {
+    "word": "approximate",
+    "type": "adj./verb",
+    "definition": "大约的；近似的；接近",
+    "example": "The approximate cost is $100.",
+    "exampleTranslation": "大约费用是100美元。"
+  },
+  {
+    "word": "approximately",
+    "type": "adv.",
+    "definition": "大约；近似地；近于",
+    "example": "There are approximately 50 people.",
+    "exampleTranslation": "大约有50人。"
+  },
+  {
+    "word": "apartment",
+    "type": "noun",
+    "definition": "公寓；房间；套间",
+    "example": "I live in an apartment.",
+    "exampleTranslation": "我住在一套公寓里。"
+  },
+  {
+    "word": "apologize",
+    "type": "verb",
+    "definition": "道歉；谢罪；认错",
+    "example": "He apologized for his mistake.",
+    "exampleTranslation": "他为自己的错误道歉。"
+  },
+  {
+    "word": "apology",
+    "type": "noun",
+    "definition": "道歉；歉意；辩解",
+    "example": "I owe you an apology.",
+    "exampleTranslation": "我欠你一个道歉。"
+  },
+  {
+    "word": "apparent",
+    "type": "adj.",
+    "definition": "明显的；表面上的；貌似的",
+    "example": "Her disappointment was apparent.",
+    "exampleTranslation": "她的失望是显而易见的。"
+  },
+  {
+    "word": "appeal",
+    "type": "noun/verb",
+    "definition": "呼吁；上诉；恳求",
+    "example": "The appeal for donations was successful.",
+    "exampleTranslation": "募捐呼吁很成功。"
+  },
+  {
+    "word": "appear",
+    "type": "verb",
+    "definition": "出现；显得；似乎",
+    "example": "He appeared suddenly.",
+    "exampleTranslation": "他突然出现了。"
+  },
+  {
+    "word": "appearance",
+    "type": "noun",
+    "definition": "出现；外貌；外观",
+    "example": "She has a neat appearance.",
+    "exampleTranslation": "她外表整洁。"
+  },
+  {
+    "word": "apple",
+    "type": "noun",
+    "definition": "苹果；苹果树",
+    "example": "I like to eat apples.",
+    "exampleTranslation": "我喜欢吃苹果。"
+  },
+  {
+    "word": "application",
+    "type": "noun",
+    "definition": "应用；申请；应用程序",
+    "example": "I submitted my application.",
+    "exampleTranslation": "我提交了我的申请。"
+  },
+  {
+    "word": "apply",
+    "type": "verb",
+    "definition": "申请；应用；适用",
+    "example": "I need to apply for a visa.",
+    "exampleTranslation": "我需要申请签证。"
+  },
+  {
+    "word": "appointment",
+    "type": "noun",
+    "definition": "任命；约会；约定",
+    "example": "I have a doctor's appointment.",
+    "exampleTranslation": "我和医生有约。"
+  },
+  {
+    "word": "appreciate",
+    "type": "verb",
+    "definition": "欣赏；感激；理解",
+    "example": "I appreciate your help.",
+    "exampleTranslation": "我感谢你的帮助。"
+  },
+  {
+    "word": "approach",
+    "type": "verb/noun",
+    "definition": "接近；方法；途径",
+    "example": "We need a new approach.",
+    "exampleTranslation": "我们需要一种新方法。"
+  },
+  {
+    "word": "approval",
+    "type": "noun",
+    "definition": "批准；认可；赞成",
+    "example": "The plan needs approval.",
+    "exampleTranslation": "这个计划需要批准。"
+  },
+  {
+    "word": "approve",
+    "type": "verb",
+    "definition": "批准；赞成；认可",
+    "example": "They approved the plan.",
+    "exampleTranslation": "他们批准了这个计划。"
+  },
+  {
+    "word": "approximate",
+    "type": "adj./verb",
+    "definition": "大约的；近似的；接近",
+    "example": "The approximate cost is $100.",
+    "exampleTranslation": "大约费用是100美元。"
+  },
+  {
+    "word": "approximately",
+    "type": "adv.",
+    "definition": "大约；近似地；近于",
+    "example": "There are approximately 50 people.",
+    "exampleTranslation": "大约有50人。"
+  },
+  {
+    "word": "apartment",
+    "type": "noun",
+    "definition": "公寓；房间；套间",
+    "example": "I live in an apartment.",
+    "exampleTranslation": "我住在一套公寓里。"
+  },
+  {
+    "word": "apologize",
+    "type": "verb",
+    "definition": "道歉；谢罪；认错",
+    "example": "He apologized for his mistake.",
+    "exampleTranslation": "他为自己的错误道歉。"
+  },
+  {
+    "word": "apology",
+    "type": "noun",
+    "definition": "道歉；歉意；辩解",
+    "example": "I owe you an apology.",
+    "exampleTranslation": "我欠你一个道歉。"
+  },
+  {
+    "word": "apparent",
+    "type": "adj.",
+    "definition": "明显的；表面上的；貌似的",
+    "example": "Her disappointment was apparent.",
+    "exampleTranslation": "她的失望是显而易见的。"
+  },
+  {
+    "word": "appeal",
+    "type": "noun/verb",
+    "definition": "呼吁；上诉；恳求",
+    "example": "The appeal for donations was successful.",
+    "exampleTranslation": "募捐呼吁很成功。"
+  },
+  {
+    "word": "appear",
+    "type": "verb",
+    "definition": "出现；显得；似乎",
+    "example": "He appeared suddenly.",
+    "exampleTranslation": "他突然出现了。"
+  },
+  {
+    "word": "ant",
+    "type": "noun",
+    "definition": "蚂蚁",
+    "example": "An ant is a small insect.",
+    "exampleTranslation": "蚂蚁是一种小昆虫。"
+  },
+  {
+    "word": "anticipate",
+    "type": "verb",
+    "definition": "预期；期望；预见",
+    "example": "We anticipate good results.",
+    "exampleTranslation": "我们预期会有好结果。"
+  },
+  {
+    "word": "antique",
+    "type": "adj./noun",
+    "definition": "古老的；古董；古风的",
+    "example": "This is an antique clock.",
+    "exampleTranslation": "这是一个古董钟。"
+  },
+  {
+    "word": "anxiety",
+    "type": "noun",
+    "definition": "焦虑；忧虑；渴望",
+    "example": "She felt anxiety about the future.",
+    "exampleTranslation": "她对未来感到焦虑。"
+  },
+  {
+    "word": "anxious",
+    "type": "adj.",
+    "definition": "焦虑的；渴望的；担忧的",
+    "example": "He is anxious about his exam.",
+    "exampleTranslation": "他为考试感到焦虑。"
+  },
+  {
+    "word": "any",
+    "type": "adj./pron.",
+    "definition": "任何的；任一的；一些",
+    "example": "Do you have any questions?",
+    "exampleTranslation": "你有什么问题吗？"
+  },
+  {
+    "word": "anybody",
+    "type": "pron.",
+    "definition": "任何人；无论谁",
+    "example": "Does anybody know the answer?",
+    "exampleTranslation": "有人知道答案吗？"
+  },
+  {
+    "word": "anyhow",
+    "type": "adv.",
+    "definition": "无论如何；不管怎样；总之",
+    "example": "We have to finish it anyhow.",
+    "exampleTranslation": "我们无论如何都要完成它。"
+  },
+  {
+    "word": "anyone",
+    "type": "pron.",
+    "definition": "任何人；无论谁",
+    "example": "Anyone can do this.",
+    "exampleTranslation": "任何人都能做到这一点。"
+  },
+  {
+    "word": "anything",
+    "type": "pron.",
+    "definition": "任何事；任何东西；无论何事",
+    "example": "Is there anything I can do?",
+    "exampleTranslation": "有什么我能做的吗？"
+  },
+  {
+    "word": "anyway",
+    "type": "adv.",
+    "definition": "无论如何；不管怎样；总之",
+    "example": "Anyway, we have to go.",
+    "exampleTranslation": "无论如何，我们都得走了。"
+  },
+  {
+    "word": "anywhere",
+    "type": "adv.",
+    "definition": "任何地方；无论何处",
+    "example": "You can go anywhere you like.",
+    "exampleTranslation": "你可以去任何你喜欢的地方。"
+  },
+  {
+    "word": "apart",
+    "type": "adv.",
+    "definition": "分开；分离；相距",
+    "example": "They live apart.",
+    "exampleTranslation": "他们分开住。"
+  },
+  {
+    "word": "apartment",
+    "type": "noun",
+    "definition": "公寓；房间；套间",
+    "example": "I live in an apartment.",
+    "exampleTranslation": "我住在一套公寓里。"
+  },
+  {
+    "word": "apologize",
+    "type": "verb",
+    "definition": "道歉；谢罪；认错",
+    "example": "He apologized for his mistake.",
+    "exampleTranslation": "他为自己的错误道歉。"
+  },
+  {
+    "word": "apology",
+    "type": "noun",
+    "definition": "道歉；歉意；辩解",
+    "example": "I owe you an apology.",
+    "exampleTranslation": "我欠你一个道歉。"
+  },
+  {
+    "word": "apparent",
+    "type": "adj.",
+    "definition": "明显的；表面上的；貌似的",
+    "example": "Her disappointment was apparent.",
+    "exampleTranslation": "她的失望是显而易见的。"
+  },
+  {
+    "word": "appeal",
+    "type": "noun/verb",
+    "definition": "呼吁；上诉；恳求",
+    "example": "The appeal for donations was successful.",
+    "exampleTranslation": "募捐呼吁很成功。"
+  },
+  {
+    "word": "answer",
+    "type": "noun/verb",
+    "definition": "回答；答复；回应",
+    "example": "I don't know the answer.",
+    "exampleTranslation": "我不知道答案。"
+  },
+  {
+    "word": "ant",
+    "type": "noun",
+    "definition": "蚂蚁",
+    "example": "There's an ant on the table.",
+    "exampleTranslation": "桌子上有一只蚂蚁。"
+  },
+  {
+    "word": "antarctic",
+    "type": "adj./noun",
+    "definition": "南极的；南极地区",
+    "example": "The Antarctic is very cold.",
+    "exampleTranslation": "南极非常寒冷。"
+  },
+  {
+    "word": "antelope",
+    "type": "noun",
+    "definition": "羚羊",
+    "example": "The antelope ran fast.",
+    "exampleTranslation": "羚羊跑得很快。"
+  },
+  {
+    "word": "anxiety",
+    "type": "noun",
+    "definition": "焦虑；忧虑；渴望",
+    "example": "She felt anxiety about the future.",
+    "exampleTranslation": "她对未来感到焦虑。"
+  },
+  {
+    "word": "anxious",
+    "type": "adj.",
+    "definition": "焦虑的；渴望的；担忧的",
+    "example": "He is anxious about his exam.",
+    "exampleTranslation": "他为考试感到焦虑。"
+  },
+  {
+    "word": "any",
+    "type": "adj./pron.",
+    "definition": "任何的；任一的；一些",
+    "example": "Do you have any questions?",
+    "exampleTranslation": "你有什么问题吗？"
+  },
+  {
+    "word": "anybody",
+    "type": "pron.",
+    "definition": "任何人；无论谁",
+    "example": "Does anybody know the answer?",
+    "exampleTranslation": "有人知道答案吗？"
+  },
+  {
+    "word": "anyhow",
+    "type": "adv.",
+    "definition": "无论如何；不管怎样；总之",
+    "example": "We have to finish it anyhow.",
+    "exampleTranslation": "我们无论如何都要完成它。"
+  },
+  {
+    "word": "anyone",
+    "type": "pron.",
+    "definition": "任何人；无论谁",
+    "example": "Anyone can do this.",
+    "exampleTranslation": "任何人都能做到这一点。"
+  },
+  {
+    "word": "anything",
+    "type": "pron.",
+    "definition": "任何事；任何东西；无论何事",
+    "example": "Is there anything I can do?",
+    "exampleTranslation": "有什么我能做的吗？"
+  },
+  {
+    "word": "anyway",
+    "type": "adv.",
+    "definition": "无论如何；不管怎样；总之",
+    "example": "Anyway, we have to go.",
+    "exampleTranslation": "无论如何，我们都得走了。"
+  },
+  {
+    "word": "anywhere",
+    "type": "adv.",
+    "definition": "任何地方；无论何处",
+    "example": "You can go anywhere you like.",
+    "exampleTranslation": "你可以去任何你喜欢的地方。"
+  },
+  {
+    "word": "apart",
+    "type": "adv.",
+    "definition": "分开；分离；相距",
+    "example": "They live apart.",
+    "exampleTranslation": "他们分开住。"
+  },
+  {
+    "type": "noun/verb",
+    "definition": "回答；答复；回应",
+    "example": "I don't know the answer.",
+    "exampleTranslation": "我不知道答案。"
+  },
+  {
+    "word": "ant",
+    "type": "noun",
+    "definition": "蚂蚁",
+    "example": "There's an ant on the table.",
+    "exampleTranslation": "桌子上有一只蚂蚁。"
+  },
+  {
+    "word": "antarctic",
+    "type": "adj./noun",
+    "definition": "南极的；南极地区",
+    "example": "The Antarctic is very cold.",
+    "exampleTranslation": "南极非常寒冷。"
+  },
+  {
+    "word": "antelope",
+    "type": "noun",
+    "definition": "羚羊",
+    "example": "The antelope ran fast.",
+    "exampleTranslation": "羚羊跑得很快。"
+  },
+  {
+    "word": "anxiety",
+    "type": "noun",
+    "definition": "焦虑；忧虑；渴望",
+    "example": "She felt anxiety about the future.",
+    "exampleTranslation": "她对未来感到焦虑。"
+  },
+  {
+    "word": "anxious",
+    "type": "adj.",
+    "definition": "焦虑的；渴望的；担忧的",
+    "example": "He is anxious about his exam.",
+    "exampleTranslation": "他为考试感到焦虑。"
+  },
+  {
+    "word": "any",
+    "type": "adj./pron.",
+    "definition": "任何的；任一的；一些",
+    "example": "Do you have any questions?",
+    "exampleTranslation": "你有什么问题吗？"
+  },
+  {
+    "word": "anybody",
+    "type": "pron.",
+    "definition": "任何人；无论谁",
+    "example": "Does anybody know the answer?",
+    "exampleTranslation": "有人知道答案吗？"
+  },
+  {
+    "word": "anyhow",
+    "type": "adv.",
+    "definition": "无论如何；不管怎样；总之",
+    "example": "We have to finish it anyhow.",
+    "exampleTranslation": "我们无论如何都要完成它。"
+  },
+  {
+    "word": "anyone",
+    "type": "pron.",
+    "definition": "任何人；无论谁",
+    "example": "Anyone can do this.",
+    "exampleTranslation": "任何人都能做到这一点。"
+  },
+  {
+    "word": "anything",
+    "type": "pron.",
+    "definition": "任何事；任何东西；无论何事",
+    "example": "Is there anything I can do?",
+    "exampleTranslation": "有什么我能做的吗？"
+  },
+  {
+    "word": "anyway",
+    "type": "adv.",
+    "definition": "无论如何；不管怎样；总之",
+    "example": "Anyway, we have to go.",
+    "exampleTranslation": "无论如何，我们都得走了。"
+  },
+  {
+    "word": "anywhere",
+    "type": "adv.",
+    "definition": "任何地方；无论何处",
+    "example": "You can go anywhere you like.",
+    "exampleTranslation": "你可以去任何你喜欢的地方。"
+  },
+  {
+    "word": "apart",
+    "type": "adv.",
+    "definition": "分开；分离；相距",
+    "example": "They live apart.",
+    "exampleTranslation": "他们分开住。"
+  },
+  {
+    "word": "apartment",
+    "type": "noun",
+    "definition": "公寓；房间；套间",
+    "example": "I live in an apartment.",
+    "exampleTranslation": "我住在一套公寓里。"
+  },
+  {
+    "word": "apologize",
+    "type": "verb",
+    "definition": "道歉；谢罪；认错",
+    "example": "He apologized for his mistake.",
+    "exampleTranslation": "他为自己的错误道歉。"
+  },
+  {
+    "word": "apology",
+    "type": "noun",
+    "definition": "道歉；歉意；辩解",
+    "example": "I owe you an apology.",
+    "exampleTranslation": "我欠你一个道歉。"
+  },
+  {
+    "word": "apparent",
+    "type": "adj.",
+    "definition": "明显的；表面上的；貌似的",
+    "example": "Her disappointment was apparent.",
+    "exampleTranslation": "她的失望是显而易见的。"
+  },
+  {
+    "word": "appeal",
+    "type": "noun/verb",
+    "definition": "呼吁；上诉；恳求",
+    "example": "The appeal for donations was successful.",
+    "exampleTranslation": "募捐呼吁很成功。"
+  },
+  {
+    "word": "appear",
+    "type": "verb",
+    "definition": "出现；显得；似乎",
+    "example": "He appeared suddenly.",
+    "exampleTranslation": "他突然出现了。"
+  },
+  {
+    "word": "appearance",
+    "type": "noun",
+    "definition": "出现；外貌；外观",
+    "example": "She has a neat appearance.",
+    "exampleTranslation": "她外表整洁。"
+  },
+  {
+    "word": "apple",
+    "type": "noun",
+    "definition": "苹果；苹果树",
+    "example": "I like to eat apples.",
+    "exampleTranslation": "我喜欢吃苹果。"
+  },
+  {
+    "word": "application",
+    "type": "noun",
+    "definition": "应用；申请；应用程序",
+    "example": "I submitted my application.",
+    "exampleTranslation": "我提交了我的申请。"
+  },
+  {
+    "word": "apply",
+    "type": "verb",
+    "definition": "申请；应用；适用",
+    "example": "I need to apply for a visa.",
+    "exampleTranslation": "我需要申请签证。"
+  },
+  {
+    "word": "appoint",
+    "type": "verb",
+    "definition": "任命；指定；约定",
+    "example": "He was appointed manager.",
+    "exampleTranslation": "他被任命为经理。"
+  },
+  {
+    "word": "appointment",
+    "type": "noun",
+    "definition": "任命；约会；约定",
+    "example": "I have a doctor's appointment.",
+    "exampleTranslation": "我和医生有约。"
+  },
+  {
+    "word": "appreciate",
+    "type": "verb",
+    "definition": "欣赏；感激；理解",
+    "example": "I appreciate your help.",
+    "exampleTranslation": "我感谢你的帮助。"
+  },
+  {
+    "word": "approach",
+    "type": "verb/noun",
+    "definition": "接近；方法；途径",
+    "example": "We need a new approach.",
+    "exampleTranslation": "我们需要一种新方法。"
+  },
+  {
+    "word": "approval",
+    "type": "noun",
+    "definition": "批准；认可；赞成",
+    "example": "The plan needs approval.",
+    "exampleTranslation": "这个计划需要批准。"
+  },
+  {
+    "word": "approve",
+    "type": "verb",
+    "definition": "批准；赞成；认可",
+    "example": "They approved the plan.",
+    "exampleTranslation": "他们批准了这个计划。"
+  },
+  {
+    "word": "approximate",
+    "type": "adj./verb",
+    "definition": "大约的；近似的；接近",
+    "example": "The approximate cost is $100.",
+    "exampleTranslation": "大约费用是100美元。"
+  },
+  {
+    "word": "approximately",
+    "type": "adv.",
+    "definition": "大约；近似地；近于",
+    "example": "There are approximately 50 people.",
+    "exampleTranslation": "大约有50人。"
+  }
+]

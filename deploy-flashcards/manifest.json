@@ -1,0 +1,18 @@
+{
+  "name": "小学一年级英语单词卡片",
+  "short_name": "单词卡片",
+  "description": "帮助一年级学生学习英语单词的互动记忆卡片应用",
+  "start_url": "/first-grade-index.html",
+  "display": "standalone",
+  "background_color": "#FFF9C4",
+  "theme_color": "#FF5722",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICAgIDxwYXRoIGQ9Ik0xMDAgMHY0MGM0NCAwIDgwIDI0IDgwIDgwczM2IDgwIDgwIDgwdi00MGMxMSAwIDIwLTkgMjAtMjBzLTktMjAtMjAtMjBoLTQwYy0xMSAwLTIwIDktMjAgMjBzOSAyMCAyMCAyMGg0MHptMCAxMjB2LTQwYy00NCAwLTgwLTI0LTgwLTgwcy0zNi04MC04MC04MHY0MGMtMTEgMC0yMCA5LTIwIDIwczkgMjAgMjAgMjBoNDBjMTEgMCAyMC05IDIwLTIwcTAtMTEtOS0yMHoiIGZpbGw9IiNGRjU3MjIiIGZpbGwtb3BhY2l0eT0iMC43Ii8+CiAgICA8cGF0aCBkPSJNMTMwIDMwdjQwYzAgMTEtOSAyMC0yMCAyMEg3MGMtMTEgMC0yMC05LTIwLTIwdjQwYzAgNDQgMzYgODAgODAgODB2LTQwYzExIDAgMjAtOSAyMC0yMHoiIGZpbGw9IiM0Q0FGNTAiIGZpbGwtb3BhY2l0eT0iMC43Ii8+CiAgICA8cGF0aCBkPSJNMTMwIDE1MHY0MGMwIDExLTkgMjAtMjAgMjBIMTBjLTIwIDAtMjAgMjAtMjAgMjB2LTQwYzAgLTQ0IDM2LTgwIDgwLTgweiIgZmlsbD0iI0ZGRjlDNCIgZmlsbC1vcGFjaXR5PSIwLjciLz4KPC9zdmc+",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

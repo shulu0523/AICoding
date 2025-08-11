@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#FF5722">
+  <title>小学一年级英语单词卡片</title>
+  <link rel="manifest" href="manifest.json">
+  <!-- 针对苹果设备的PWA支持 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="单词卡片">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICAgIDxwYXRoIGQ9Ik0xMDAgMHY0MGM0NCAwIDgwIDI0IDgwIDgwczM2IDgwIDgwIDgwdi00MGMxMSAwIDIwLTkgMjAtMjBzLTktMjAtMjAtMjBoLTQwYy0xMSAwLTIwIDktMjAgMjBzOSAyMCAyMCAyMGg0MHptMCAxMjB2LTQwYy00NCAwLTgwLTI0LTgwLTgwcy0zNi04MC04MC04MHY0MGMtMTEgMC0yMCA5LTIwIDIwczkgMjAgMjAgMjBoNDBjMTEgMCAyMC05IDIwLTIwcTAtMTEtOS0yMHoiIGZpbGw9IiNGRjU3MjIiIGZpbGwtb3BhY2l0eT0iMC43Ii8+CiAgICA8cGF0aCBkPSJNMTMwIDMwdjQwYzAgMTEtOSAyMC0yMCAyMEg3MGMtMTEgMC0yMC05LTIwLTIwdjQwYzAgNDQgMzYgODAgODAgODB2LTQwYzExIDAgMjAtOSAyMC0yMHoiIGZpbGw9IiM0Q0FGNTAiIGZpbGwtb3BhY2l0eT0iMC43Ii8+CiAgICA8cGF0aCBkPSJNMTMwIDE1MHY0MGMwIDExLTkgMjAtMjAgMjBIMTBjLTIwIDAtMjAgMjAtMjAgMjB2LTQwYzAgLTQ0IDM2LTgwIDgwLTgweiIgZmlsbD0iI0ZGRjlDNCIgZmlsbC1vcGFjaXR5PSIwLjciLz4KPC9zdmc+">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Tailwind配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FFF9C4',
+            secondary: '#FFFFFF',
+            accent: '#FF5722',
+            success: '#4CAF50',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .card-flip {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      }
+      .card-front, .card-back {
+        backface-visibility: hidden;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
+      .card-flipped .card-front {
+        transform: rotateY(180deg);
+      }
+      .card-flipped .card-back {
+        transform: rotateY(0deg);
+      }
+      .stat-bar {
+        height: 10px;
+        border-radius: 5px;
+        background-color: #e0e0e0;
+        overflow: hidden;
+      }
+      .stat-progress {
+        height: 100%;
+        transition: width 0.5s ease;
+      }
+    }
+  </style>
+</head>
+<body class="bg-primary min-h-screen flex flex-col items-center justify-start p-4">
+  <!-- 统计区域 -->
+  <div class="w-full max-w-4xl bg-white rounded-xl shadow-md p-4 my-6">
+    <div class="w-full">
+      <div class="flex justify-between mb-2">
+        <span class="text-gray-700 font-medium">学习进度</span>
+        <span id="progress-text" class="text-accent font-bold">0/0</span>
+      </div>
+      <div class="stat-bar">
+        <div id="progress-bar" class="stat-progress bg-accent" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主内容区域 -->
+  <main class="w-full max-w-4xl flex-grow flex flex-col items-center justify-center">
+    <!-- 单词卡片 -->
+    <div id="card-container" class="card-flip w-full max-w-md aspect-[4/3] cursor-pointer mb-8 relative">
+      <div id="card" class="w-full h-full rounded-2xl shadow-xl overflow-hidden bg-secondary border-4 border-accent/20">
+        <!-- 卡片正面 (英文单词) -->
+        <div class="card-front absolute w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-b from-secondary to-blue-50">
+          <div class="mb-6">
+            <button id="play-audio" class="text-accent hover:text-accent/80 transition-colors text-3xl">
+              <i class="fa fa-volume-up"></i>
+            </button>
+          </div>
+          <!-- 单词图片 -->
+          <div id="word-image" class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mb-6 overflow-hidden">
+            <i class="fa fa-image text-gray-300 text-5xl"></i>
+          </div>
+          <h2 id="word" class="text-[clamp(3rem,10vw,5rem)] font-bold text-gray-800 text-center mb-2">loading...</h2>
+          <p id="word-type" class="text-gray-500 text-xl italic">--</p>
+        </div>
+
+        <!-- 卡片背面 (中文释义) -->
+        <div class="card-back absolute w-full h-full flex flex-col items-center justify-center p-8 bg-gradient-to-b from-green-50 to-secondary">
+          <h2 id="word-back" class="text-[clamp(2rem,6vw,3rem)] font-bold text-gray-800 text-center mb-4">loading...</h2>
+          <div class="w-full max-w-xs">
+            <p id="definition" class="text-gray-700 text-2xl leading-relaxed text-center mb-6">--</p>
+            <div class="mt-4 text-gray-600">
+              <div class="flex items-center justify-center mb-2 gap-2">
+              <p id="example" class="italic text-center flex-grow text-lg">--</p>
+              <button id="play-example-audio" class="text-accent hover:text-accent/80 transition-colors text-lg">
+                <i class="fa fa-volume-up"></i>
+              </button>
+            </div>
+              <p id="example-translation" class="mt-2 text-center font-medium">--</p>
+            </div>
+
+            <div class="mt-8 flex justify-center gap-4">
+              <button id="master-btn" class="px-4 py-3 bg-gray-200 hover:bg-success hover:text-white rounded-lg transition-colors text-lg">
+                <i class="fa fa-thumbs-up mr-1"></i> 我学会了
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 进度指示器 -->
+      <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 flex-wrap justify-center" id="progress-indicators">
+        <!-- 动态生成 -->
+      </div>
+    </div>
+
+    <!-- 控制按钮已移除 -->
+  </main>
+
+  <script>
+    // 应用配置
+    const config = {
+      dailyNewWords: 5, // 每天学习的新单词数量，一年级学生适合更少
+    };
+
+    // 全局数据
+    let allVocabulary = []; // 所有单词
+    let dailyWords = []; // 今日学习的单词
+    let currentWordIndex = 0;
+
+    // DOM元素
+    const card = document.getElementById('card');
+    const cardContainer = document.getElementById('card-container');
+    const wordElement = document.getElementById('word');
+    const wordBackElement = document.getElementById('word-back');
+    const wordTypeElement = document.getElementById('word-type');
+    const definitionElement = document.getElementById('definition');
+    const exampleElement = document.getElementById('example');
+    const exampleTranslationElement = document.getElementById('example-translation');
+    const wordImageElement = document.getElementById('word-image');
+    const playAudioButton = document.getElementById('play-audio');
+    const masterButton = document.getElementById('master-btn');
+    const progressText = document.getElementById('progress-text');
+    const progressBar = document.getElementById('progress-bar');
+    // 加载状态元素已移除
+    const loadingElement = null;
+
+    // 初始化应用
+    async function initApp() {
+      try {
+        // 获取单词数据
+        await fetchVocabularyData();
+
+        // 从本地存储加载学习数据
+        loadLearningData();
+
+        // 准备今日学习计划
+        prepareDailyWords();
+
+        // 初始化显示第一个单词
+        if (dailyWords.length > 0) {
+          currentWordIndex = 0;
+          updateCardDisplay();
+          updateProgressStats();
+        } else {
+          showEmptyState();
+        }
+      } catch (error) {
+        console.error('初始化失败:', error);
+        alert('加载单词库失败，请刷新页面重试');
+      }
+    }
+
+    // 从first-grade-vocabulary.json文件获取单词数据
+    async function fetchVocabularyData() {
+      console.log('开始加载单词数据...');
+
+      try {
+        // 从本地JSON文件加载数据
+        console.log('尝试从first-grade-vocabulary.json加载数据');
+        const response = await fetch('first-grade-vocabulary.json');
+        console.log('请求状态:', response.status);
+        if (!response.ok) {
+          throw new Error('Failed to load vocabulary data: ' + response.statusText);
+        }
+
+        const data = await response.json();
+        allVocabulary = data;
+        console.log('单词数据加载成功，数量:', allVocabulary.length);
+      } catch (error) {
+        console.error('加载单词数据错误:', error);
+        alert('加载单词库失败: ' + error.message);
+      }
+    }
+
+    // 从本地存储加载学习数据
+    function loadLearningData() {
+      const storedData = localStorage.getItem('firstGradeVocabularyLearningData');
+      if (storedData) {
+        const learningData = JSON.parse(storedData);
+
+        // 恢复单词学习状态
+        if (learningData.wordStatus) {
+          learningData.wordStatus.forEach(status => {
+            const wordIndex = allVocabulary.findIndex(w => w.word === status.word);
+            if (wordIndex !== -1) {
+              allVocabulary[wordIndex] = { ...allVocabulary[wordIndex], ...status };
+            }
+          });
+        }
+      }
+    }
+
+    // 保存学习数据到本地存储
+    function saveLearningData() {
+      const wordStatus = allVocabulary.map(word => ({
+        word: word.word,
+        isMastered: word.isMastered || false,
+      }));
+
+      const learningData = {
+        wordStatus
+      };
+
+      localStorage.setItem('firstGradeVocabularyLearningData', JSON.stringify(learningData));
+    }
+
+    // 准备今日学习的单词
+    function prepareDailyWords() {
+      // 简单版本：不考虑复习间隔，只是随机选择单词
+      // 筛选未掌握的单词
+      const unmasteredWords = allVocabulary.filter(word => !word.isMastered);
+
+      // 如果未掌握的单词不足，就重新使用所有单词
+      if (unmasteredWords.length < config.dailyNewWords) {
+        dailyWords = [...allVocabulary];
+      } else {
+        dailyWords = [...unmasteredWords];
+      }
+
+      // 打乱顺序并选择指定数量
+      shuffleArray(dailyWords);
+      dailyWords = dailyWords.slice(0, config.dailyNewWords);
+    }
+
+    // 更新卡片显示内容
+    function updateCardDisplay() {
+      if (dailyWords.length === 0 || currentWordIndex >= dailyWords.length) return;
+
+      const currentWord = dailyWords[currentWordIndex];
+
+      wordElement.textContent = currentWord.word;
+      wordBackElement.textContent = currentWord.word;
+      wordTypeElement.textContent = currentWord.type;
+      definitionElement.textContent = currentWord.definition;
+      exampleElement.textContent = currentWord.example;
+      exampleTranslationElement.textContent = currentWord.exampleTranslation;
+
+      // 更新单词图片
+      updateWordImage(currentWord.word);
+
+      // 更新已掌握按钮样式
+      updateMasterButton();
+
+      // 更新进度指示器
+      updateProgressIndicators();
+    }
+
+    // 更新单词图片
+    function updateWordImage(word) {
+      // 这里使用简单的图标映射，实际应用中可以使用真实图片URL
+      const iconMap = {
+        'apple': 'fa-apple',
+        'banana': 'fa-cutlery',
+        'cat': 'fa-paw',
+        'dog': 'fa-paw',
+        'red': 'fa-heart',
+        'blue': 'fa-tint',
+        'one': 'fa-hashtag',
+        'two': 'fa-hashtag',
+        'hello': 'fa-smile-o',
+        'goodbye': 'fa-hand-peace-o',
+        'book': 'fa-book',
+        'pen': 'fa-pencil',
+        'school': 'fa-university',
+        'teacher': 'fa-user',
+        'student': 'fa-child',
+        'friend': 'fa-users',
+        'water': 'fa-tint',
+        'milk': 'fa-glass',
+        'eat': 'fa-cutlery',
+        'drink': 'fa-glass'
+      };
+
+      const colorMap = {
+        'apple': 'bg-red-100 text-red-500',
+        'banana': 'bg-yellow-100 text-yellow-500',
+        'cat': 'bg-gray-100 text-gray-500',
+        'dog': 'bg-amber-100 text-amber-500',
+        'red': 'bg-red-100 text-red-500',
+        'blue': 'bg-blue-100 text-blue-500',
+        'one': 'bg-green-100 text-green-500',
+        'two': 'bg-purple-100 text-purple-500',
+        'hello': 'bg-pink-100 text-pink-500',
+        'goodbye': 'bg-indigo-100 text-indigo-500',
+        'book': 'bg-blue-100 text-blue-500',
+        'pen': 'bg-orange-100 text-orange-500',
+        'school': 'bg-brown-100 text-brown-500',
+        'teacher': 'bg-teal-100 text-teal-500',
+        'student': 'bg-green-100 text-green-500',
+        'friend': 'bg-purple-100 text-purple-500',
+        'water': 'bg-blue-100 text-blue-500',
+        'milk': 'bg-white text-gray-400',
+        'eat': 'bg-red-100 text-red-500',
+        'drink': 'bg-blue-100 text-blue-500'
+      };
+
+      const iconClass = iconMap[word.toLowerCase()] || 'fa-image';
+      const colorClass = colorMap[word.toLowerCase()] || 'bg-gray-100 text-gray-300';
+
+      wordImageElement.className = `w-32 h-32 ${colorClass} rounded-full flex items-center justify-center mb-6 overflow-hidden`;
+      wordImageElement.innerHTML = `<i class="fa ${iconClass} text-5xl"></i>`;
+    }
+
+    // 更新已掌握按钮样式
+    function updateMasterButton() {
+      const currentWord = dailyWords[currentWordIndex];
+
+      if (currentWord.isMastered) {
+        masterButton.classList.remove('bg-gray-200', 'hover:bg-success');
+        masterButton.classList.add('bg-success', 'text-white', 'hover:bg-success/80');
+        masterButton.innerHTML = '<i class="fa fa-thumbs-up mr-1"></i> 已学会';
+      } else {
+        masterButton.classList.remove('bg-success', 'text-white', 'hover:bg-success/80');
+        masterButton.classList.add('bg-gray-200', 'hover:bg-success', 'hover:text-white');
+        masterButton.innerHTML = '<i class="fa fa-thumbs-up mr-1"></i> 我学会了';
+      }
+    }
+
+    // 更新进度指示器
+    function updateProgressIndicators() {
+      const indicatorsContainer = document.getElementById('progress-indicators');
+      indicatorsContainer.innerHTML = '';
+
+      // 为每个单词创建指示器
+      dailyWords.forEach((word, index) => {
+        const indicator = document.createElement('span');
+        indicator.className = 'w-4 h-4 rounded-full mx-1';
+
+        // 当前单词
+        if (index === currentWordIndex) {
+          indicator.classList.add('ring-2', 'ring-offset-2', 'ring-accent');
+        }
+
+        // 已掌握的单词
+        if (word.isMastered) {
+          indicator.classList.add('bg-success');
+        } else {
+          indicator.classList.add('bg-gray-300');
+        }
+
+        indicatorsContainer.appendChild(indicator);
+      });
+    }
+
+    // 更新进度统计
+    function updateProgressStats() {
+      const totalWords = allVocabulary.length;
+      const masteredWords = allVocabulary.filter(word => word.isMastered).length;
+      const percentage = totalWords > 0 ? Math.round((masteredWords / totalWords) * 100) : 0;
+
+      progressText.textContent = `${masteredWords}/${totalWords}`;
+      progressBar.style.width = `${percentage}%`;
+    }
+
+    // 标记单词为已掌握
+    function markAsMastered() {
+      const currentWord = dailyWords[currentWordIndex];
+      currentWord.isMastered = true;
+
+      saveLearningData();
+      updateMasterButton();
+      updateProgressStats();
+      updateProgressIndicators();
+
+      // 自动跳到下一个单词
+      setTimeout(() => {
+        // 确保卡片翻转回正面
+        cardContainer.classList.remove('card-flipped');
+
+        // 计算下一个索引
+        currentWordIndex = (currentWordIndex + 1) % dailyWords.length;
+        updateCardDisplay();
+      }, 500);
+    }
+
+    // 显示空状态
+    function showEmptyState() {
+      wordElement.textContent = "太棒了！";
+      wordBackElement.textContent = "太棒了！";
+      wordTypeElement.textContent = "";
+      definitionElement.textContent = "你已经学会了所有单词！";
+      exampleElement.textContent = "";
+      exampleTranslationElement.textContent = "";
+      wordImageElement.innerHTML = '<i class="fa fa-trophy text-yellow-500 text-5xl"></i>';
+      wordImageElement.className = 'w-32 h-32 bg-yellow-100 rounded-full flex items-center justify-center mb-6 overflow-hidden';
+    }
+
+    // 工具函数：打乱数组顺序
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // 事件监听器
+    function setupEventListeners() {
+      // 卡片点击翻转
+      card.addEventListener('click', (e) => {
+        // 检查点击的是不是按钮或其内部元素
+        if (!e.target.closest('button')) {
+          cardContainer.classList.toggle('card-flipped');
+        }
+      });
+
+      // 音频播放按钮通用设置函数
+      function setupAudioButton(button, getTextFunction) {
+        button.addEventListener('click', async (e) => {
+          e.stopPropagation();
+
+          const text = getTextFunction();
+          if (!text) return;
+
+          button.classList.add('animate-pulse');
+
+          try {
+            // 检测是否为微信浏览器
+            const isWeChatBrowser = /MicroMessenger/i.test(navigator.userAgent);
+
+            if (isWeChatBrowser && window.wechatAudioPlay) {
+              // 使用微信专用播放函数
+              await window.wechatAudioPlay(text);
+            } else {
+              // 优先尝试使用Web Speech API
+              if ('speechSynthesis' in window) {
+                // 检查语音合成是否准备就绪
+                if (speechSynthesis.pending || speechSynthesis.speaking) {
+                  speechSynthesis.cancel();
+                }
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.volume = 1;
+                utterance.rate = 0.8;  // 降低语速，更适合学习
+
+                // 使用Promise包装语音合成
+                await new Promise((resolve, reject) => {
+                  utterance.onend = resolve;
+                  utterance.onerror = reject;
+                  speechSynthesis.speak(utterance);
+                });
+              } else {
+                // 如果不支持Web Speech API，显示提示
+                alert('您的浏览器不支持语音合成，请使用现代浏览器或检查网络连接。');
+              }
+            }
+          } catch (error) {
+            console.error('语音播放失败:', error);
+            alert('无法播放声音，请重试或检查网络连接。');
+          } finally {
+            button.classList.remove('animate-pulse');
+          }
+        });
+      }
+
+      // 设置单词发音按钮
+      setupAudioButton(playAudioButton, () => dailyWords[currentWordIndex]?.word);
+
+      // 设置例句发音按钮
+      const playExampleAudioButton = document.getElementById('play-example-audio');
+      setupAudioButton(playExampleAudioButton, () => dailyWords[currentWordIndex]?.example);
+
+      // 标记已掌握按钮点击事件
+      masterButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (dailyWords.length === 0) return;
+
+        markAsMastered();
+      });
+
+      // 添加键盘导航支持
+      document.addEventListener('keydown', (event) => {
+        if (event.target.closest('input') || event.target.closest('textarea')) return;
+
+        if (event.key === ' ') {
+          // 空格键翻转卡片
+          cardContainer.classList.toggle('card-flipped');
+        } else if (event.key.toLowerCase() === 'm') {
+          // M键标记已掌握
+          masterButton.click();
+        }
+      });
+    }
+
+    // 注册Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then((registration) => {
+            console.log('ServiceWorker 注册成功: ', registration.scope);
+          })
+          .catch((error) => {
+            console.log('ServiceWorker 注册失败: ', error);
+          });
+      });
+    }
+
+    // 添加移动设备和微信浏览器声音播放优化
+    document.addEventListener('DOMContentLoaded', () => {
+      // 检测是否为微信浏览器
+      const isWeChatBrowser = /MicroMessenger/i.test(navigator.userAgent);
+      let audioContext = null;
+
+      // 初始化音频上下文的函数
+      function initAudioContext() {
+        if (!audioContext) {
+          try {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            // 创建一个静默的声音来初始化音频上下文
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            gainNode.gain.value = 0;
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.1);
+          } catch (e) {
+            console.error('无法初始化音频上下文:', e);
+          }
+        }
+      }
+
+      // 为所有移动设备添加触摸事件监听器以激活音频上下文
+      if (/(iPhone|iPad|iPod|Android)/i.test(navigator.userAgent)) {
+        // 创建一个一次性的事件监听器来激活音频上下文
+        const unlockAudio = () => {
+          initAudioContext();
+
+          // 移除监听器
+          document.removeEventListener('click', unlockAudio);
+          document.removeEventListener('touchstart', unlockAudio);
+          document.removeEventListener('touchend', unlockAudio);
+        };
+
+        // 添加多个事件监听器以确保捕获用户交互
+        document.addEventListener('click', unlockAudio);
+        document.addEventListener('touchstart', unlockAudio);
+        document.addEventListener('touchend', unlockAudio);
+      }
+
+      // 微信浏览器特殊处理
+      if (isWeChatBrowser) {
+        // 提示用户点击页面激活声音
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg z-50';
+        toast.textContent = '点击页面任意位置激活声音';
+        document.body.appendChild(toast);
+
+        // 3秒后隐藏提示
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 500);
+        }, 3000);
+
+        // 为微信浏览器添加阿里云函数音频播放处理
+        window.wechatAudioPlay = function(text) {
+          // 确保音频上下文已初始化
+          initAudioContext();
+
+          return new Promise((resolve, reject) => {
+            // 显示加载中状态
+            const loadingToast = document.createElement('div');
+            loadingToast.className = 'fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg z-50';
+            loadingToast.textContent = '正在生成语音...';
+            document.body.appendChild(loadingToast);
+
+            // 调用阿里云函数进行语音合成
+            // 注意：这里的URL和参数需要根据实际的阿里云函数进行调整
+            fetch('https://your-aliyun-function-url.execute-api.region-id.amazonaws.com/tts', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'your-aliyun-authorization'  // 替换为实际的授权信息
+              },
+              body: JSON.stringify({
+                text: text,
+                language: 'en-US',
+                speechRate: 0.8,
+                volume: 1.0
+              })
+            })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Serverless函数调用失败: ' + response.statusText);
+              }
+              return response.blob(); // 假设返回的是音频blob
+            })
+            .then(blob => {
+              // 移除加载提示
+              document.body.removeChild(loadingToast);
+
+              // 创建音频元素播放
+              const audio = new Audio(URL.createObjectURL(blob));
+              audio.onended = () => {
+                URL.revokeObjectURL(audio.src); // 释放资源
+                resolve();
+              };
+              audio.onerror = (error) => {
+                URL.revokeObjectURL(audio.src); // 释放资源
+                reject(error);
+              };
+
+              // 尝试播放音频
+              audio.play().catch(playError => {
+                console.error('音频播放失败:', playError);
+                alert('无法播放声音，请重试。');
+                reject(playError);
+              });
+            })
+            .catch(error => {
+              // 移除加载提示
+              document.body.removeChild(loadingToast);
+
+              console.error('语音生成失败:', error);
+              alert('无法生成语音，请重试或检查网络连接。');
+              reject(error);
+            });
+          });
+        };
+      }
+    });
+
+    // 启动应用
+    window.addEventListener('DOMContentLoaded', () => {
+      setupEventListeners();
+      initApp();
+    });
+  </script>
+</body>
+</html>
